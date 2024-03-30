@@ -331,6 +331,81 @@ export const sweeteners = [
     comparisonWithNaturalFoods: {
       text: "Saccharin, unlike sugars naturally present in food, does not provide calories or affect insulin levels, making it a useful tool in managing dietary sugar intake."
     }
+  },
+  {
+    id: 5,
+    name: "Sucralose",
+    type: "Artificial Sweeteners",
+    overview: {
+      generalInfo: "Sucralose is a no-calorie artificial sweetener derived from sugar. It is approximately 600 times sweeter than sucrose (table sugar), allowing for its use in minute quantities to achieve a sweet taste without the calories associated with sugar.",
+      history: "Discovered in 1976, sucralose was approved for use in foods and beverages by the FDA in 1998. It has gained popularity worldwide due to its sugar-like taste and stability under heat, making it suitable for a wide range of products.",
+      notablePoints: "Unlike some other sweeteners, sucralose does not have a bitter aftertaste and does not break down under heat, which makes it a preferred sweetener for cooking and baking as well as in processed foods."
+    },
+    sweetnessRelativeToSugar: {
+      value: 600,
+      text: "Due to its high sweetness intensity, only a small amount of sucralose is needed to achieve the desired level of sweetness, making it a cost-effective and calorie-saving alternative to sugar."
+    },
+    generalSafety: {
+      text: "Extensive scientific research and regulatory review have affirmed sucralose's safety for the general population, including individuals with diabetes, pregnant women, and children, within the acceptable daily intake (ADI) limits."
+    },
+    safeDosage: {
+      amount: "5 mg/kg of body weight per day",
+      text: "The ADI for sucralose is set at a level that can be consumed every day over a lifetime without posing a risk to health."
+    },
+    practicalSafeDosageExample: {
+      amountPer70kgAdult: 350,
+      equivalentInDietSoda: "Approximately 40 to 60 cans, depending on the brand and formulation",
+      text: "For an adult weighing 70 kg, the safe daily intake of sucralose would be equivalent to consuming an unusually large number of cans of diet soda, highlighting the difficulty of reaching this limit through normal dietary consumption."
+    },
+    benefitsComparedToSugar: {
+      list: [
+        "Enables significant calorie reduction in diets, aiding weight management.",
+        "Does not contribute to tooth decay.",
+        "Suitable for individuals managing blood sugar levels, including those with diabetes."
+      ],
+      text: "Sucralose offers the sweet taste of sugar without its caloric impact, supporting dietary goals and health management without compromising taste."
+    },
+    primaryUses: "Sucralose is used in a vast array of products, including beverages, baked goods, candies, dessert mixes, breakfast bars, and tabletop sweeteners, due to its versatility and stability.",
+    approvalByGoverningBodies: {
+      details: [
+        { country: "EU", name: "European Food Safety Authority (EFSA)", link: "https://www.efsa.europa.eu/" },
+        { country: "USA", name: "U.S. Food and Drug Administration (FDA)", link: "https://www.fda.gov/" },
+        { country: "UK", name: "Food Standards Agency", link: "https://www.food.gov.uk/" }
+      ],
+      text: "Sucralose has been thoroughly reviewed and approved for use by major health and safety organizations around the world."
+    },
+    mythsVsFacts: {
+      myth: "Sucralose is harmful to health and contributes to serious diseases.",
+      fact: "Scientific studies and reviews by health authorities globally have shown no evidence that sucralose consumption within the ADI contributes to serious diseases, including cancer."
+    },
+    sugarComparisons: {
+      context: "Using sucralose as an alternative to sugar can drastically reduce caloric intake and sugar consumption, supporting healthier dietary choices and weight management strategies.",
+      healthImplications: {
+        text: "Opting for sucralose-sweetened products over those with sugar can help mitigate risks associated with high sugar diets, such as obesity, diabetes, and tooth decay."
+      },
+      broaderPerspective: "While sucralose can play a beneficial role in reducing sugar intake, maintaining overall dietary balance and engaging in regular physical activity are crucial for health."
+    },
+    studiesAndReferences: [
+      {
+        title: "FDA Overview on Sucralose",
+        link: "https://www.fda.gov/food/food-additives-petitions/high-intensity-sweeteners",
+        text: "The FDA's information on sucralose outlines its approval and safety evaluation, supporting its use in food products."
+      },
+      {
+        title: "EFSA Conclusion on Sucralose",
+        link: "https://www.efsa.europa.eu/en/efsajournal/pub/nd",
+        text: "EFSA's scientific review supports the safety of sucralose, affirming its role as a safe sugar substitute within established guidelines."
+      }
+    ],
+    breakdownUponDigestion: {
+      text: "Sucralose is not metabolized by the body for energy. Most of it is not absorbed from the gut, and the absorbed portion is excreted unchanged."
+    },
+    amountsInCommonItems: {
+      text: "Sucralose is commonly used in diet beverages, sugar-free desserts, and low-calorie meal replacements, providing sweetness without the added calories of sugar."
+    },
+    comparisonWithNaturalFoods: {
+      text: "Sucralose provides a sweetening option without the metabolic and dental health impacts of sugar, aligning with dietary recommendations for reduced sugar consumption."
+    }
   }
   
   
