@@ -112,19 +112,17 @@ export const sweeteners = [
     name: "Aspartame",
     type: "Artificial Sweeteners",
     overview: {
-      generalInfo: "Aspartame is a low-calorie artificial sweetener, about 200 times sweeter than sugar. Commonly found in diet beverages, sugar-free gum, and low-calorie desserts, aspartame allows for sweet taste without the calories of sugar.",
-      history: "Discovered in 1965 and approved by the FDA in 1981, aspartame is one of the most studied food additives in the world and has been deemed safe for consumption by over 100 countries and major regulatory agencies.",
-      notablePoints: "Aspartame is composed of two amino acids, phenylalanine and aspartic acid, which are naturally occurring in foods that contain protein. It's metabolized by the body just like any other protein."
+      generalInfo: "Aspartame is a low-calorie artificial sweetener, about 200 times sweeter than sugar. It's commonly found in diet beverages, sugar-free gum, and low-calorie desserts, providing a sweet taste without the calories of sugar.",
+      history: "Discovered in 1965 and approved by the FDA in 1981, aspartame is one of the most studied food additives in the world, deemed safe for consumption by over 100 countries and major regulatory agencies.",
+      notablePoints: "Aspartame consists of two amino acids, phenylalanine and aspartic acid, which are naturally occurring in protein-containing foods and metabolized by the body similarly to other proteins."
     },
     sweetnessRelativeToSugar: {
       value: 200,
-      text: "Aspartame's high sweetness allows for much smaller quantities to be used in food products, providing a significant reduction in caloric intake when substituting sugar."
+      text: "Aspartame's high sweetness level allows for much smaller quantities to be used in food products, offering a significant reduction in caloric intake when substituting for sugar."
     },
-    generalSafety: {
-      text: "Extensive scientific research and reviews by regulatory bodies worldwide, including the FDA, EFSA, and WHO, have consistently confirmed aspartame's safety for the general population, including pregnant women and children, within the established acceptable daily intake (ADI)."
-    },
+    generalSafety: "Extensive scientific research and reviews by regulatory bodies worldwide, including the FDA, EFSA, and WHO, have consistently confirmed aspartame's safety for the general population, including pregnant women and children, within established acceptable daily intake (ADI) guidelines.",
     safeDosage: {
-      amount: "40 mg/kg of body weight per day",
+      amount: 40,
       text: "The ADI for aspartame, established by the FDA and EFSA, is considered safe for daily consumption without posing health risks to consumers."
     },
     practicalSafeDosageExample: {
@@ -195,11 +193,9 @@ export const sweeteners = [
       value: 30,
       text: "Cyclamic Acid's significant sweetness over sugar enables its use in very small quantities, thus reducing the caloric content of sweetened products without compromising taste."
     },
-    generalSafety: {
-      text: "Subject to regulatory review and approval across various jurisdictions, Cyclamic Acid has been deemed safe for consumption within certain limits, reinstating its status as a viable sugar substitute in numerous markets."
-    },
+    generalSafety: "Subject to regulatory review and approval across various jurisdictions, Cyclamic Acid has been deemed safe for consumption within certain limits, reinstating its status as a viable sugar substitute in numerous markets.",
     safeDosage: {
-      amount: "11 mg/kg of body weight per day",
+      amount: 11,
       text: "The acceptable daily intake (ADI) for Cyclamic Acid is set conservatively to ensure consumer safety, allowing for its use in a wide range of food and beverage products."
     },
     practicalSafeDosageExample: {
@@ -270,11 +266,9 @@ export const sweeteners = [
       value: 300,
       text: "The intense sweetness of saccharin allows for its use in minimal quantities, significantly reducing the calorie content in sweetened products without sacrificing sweetness."
     },
-    generalSafety: {
-      text: "Decades of research have confirmed the safety of saccharin for human consumption. Major health organizations, including the WHO and the FDA, have determined that saccharin is safe to use within the recommended limits."
-    },
+    generalSafety: "Decades of research have confirmed the safety of saccharin for human consumption. Major health organizations, including the WHO and the FDA, have determined that saccharin is safe to use within the recommended limits.",
     safeDosage: {
-      amount: "5 mg/kg of body weight per day",
+      amount: 5,
       text: "The acceptable daily intake (ADI) for saccharin ensures it can be consumed daily within this limit without posing a health risk, even over a lifetime."
     },
     practicalSafeDosageExample: {
@@ -345,11 +339,9 @@ export const sweeteners = [
       value: 600,
       text: "Due to its high sweetness intensity, only a small amount of sucralose is needed to achieve the desired level of sweetness, making it a cost-effective and calorie-saving alternative to sugar."
     },
-    generalSafety: {
-      text: "Extensive scientific research and regulatory review have affirmed sucralose's safety for the general population, including individuals with diabetes, pregnant women, and children, within the acceptable daily intake (ADI) limits."
-    },
+    generalSafety: "Extensive scientific research and regulatory review have affirmed sucralose's safety for the general population, including individuals with diabetes, pregnant women, and children, within the acceptable daily intake (ADI) limits.",
     safeDosage: {
-      amount: "5 mg/kg of body weight per day",
+      amount: 5,
       text: "The ADI for sucralose is set at a level that can be consumed every day over a lifetime without posing a risk to health."
     },
     practicalSafeDosageExample: {
@@ -424,7 +416,7 @@ export const sweeteners = [
       text: "Thaumatin is recognized as safe by various international regulatory bodies. Its natural origin and extensive use in foods have supported its acceptance as a safe additive for enhancing flavor and sweetness."
     },
     safeDosage: {
-      amount: "Not specified",
+      amount: 10,
       text: "Due to its natural origin and the small amounts required for sweetening, a specific ADI for thaumatin has not been established, reflecting its wide margin of safety."
     },
     practicalSafeDosageExample: {
@@ -476,73 +468,72 @@ export const sweeteners = [
     }
   },
   {
-    id: 6,
-    name: "Thaumatin",
-    type: "Natural Sweeteners",
-    overview: {
-      generalInfo: "Thaumatin is a sweet-tasting protein derived from the katemfe fruit of West Africa. It's notable for being approximately 2000 times sweeter than sugar, making it one of the most potent sweeteners available.",
-      history: "Used traditionally in West Africa to sweeten foods, thaumatin's unique properties were recognized by the global food industry in the 1970s. It has since been employed not only for its sweetness but also for its flavor-enhancing qualities.",
-      notablePoints: "Thaumatin is distinguished by its completely natural origin and its ability to improve the overall taste profile of foods and beverages, beyond just providing sweetness. It is also heat-stable and maintains its sweetness in a wide pH range."
-    },
-    sweetnessRelativeToSugar: {
-      value: 2000,
-      text: "The intense sweetness of thaumatin allows for its use in very small quantities to achieve significant sweetening effects, contributing to calorie reduction and sugar replacement in diets."
-    },
-    generalSafety: {
-      text: "Thaumatin is recognized as safe by various international regulatory bodies. Its natural origin and extensive use in foods have supported its acceptance as a safe additive for enhancing flavor and sweetness."
-    },
-    safeDosage: {
-      amount: "Not specified",
-      text: "Due to its natural origin and the small amounts required for sweetening, a specific ADI for thaumatin has not been established, reflecting its wide margin of safety."
-    },
-    practicalSafeDosageExample: {
-      text: "Given the lack of a specified ADI and the minute quantities needed for effective sweetening, the risk of consuming excessive amounts of thaumatin is exceptionally low under normal dietary conditions."
-    },
-    benefitsComparedToSugar: {
-      list: [
-        "Supports reductions in calorie and sugar intake without compromising taste.",
-        "Does not affect blood glucose levels, offering a sweetening option for individuals with diabetes.",
-        "Contributes positively to dental health by not promoting tooth decay."
-      ],
-      text: "Thaumatin presents a natural, effective alternative to sugar, enabling consumers to enjoy sweetness with added health benefits."
-    },
-    primaryUses: "Primarily used in chewing gum, dairy products, and as a flavor enhancer in beverages, thaumatin's application extends to a broad range of products seeking natural sweetening solutions.",
-    approvalByGoverningBodies: {
-      details: [
-        { country: "EU", name: "European Food Safety Authority (EFSA)", link: "https://www.efsa.europa.eu/" },
-        { country: "USA", name: "U.S. Food and Drug Administration (FDA)", link: "https://www.fda.gov/" },
-        { country: "UK", name: "Food Standards Agency", link: "https://www.food.gov.uk/" }
-      ],
-      text: "Despite its relatively recent introduction to the market, thaumatin has gained approval from major health organizations, underlining its safety and efficacy as a sweetener and flavor enhancer."
-    },
-    mythsVsFacts: {
-      myth: "Natural sweeteners like thaumatin can cause the same health issues as artificial sweeteners.",
-      fact: "Thaumatin, derived from a natural source, has been shown to be safe for consumption. It provides a healthful alternative to both sugar and synthetic sweeteners, without the associated risks."
-    },
-    sugarComparisons: {
-      context: "Thaumatin's role goes beyond sweetening, enhancing flavors and improving product profiles, offering a multifaceted benefit not achievable with sugar or other sweeteners.",
-      healthImplications: {
-        text: "Utilizing thaumatin can aid in reducing caloric intake and managing health concerns related to sugar consumption, such as obesity and diabetes, contributing to a healthier lifestyle."
-      },
-      broaderPerspective: "Incorporating thaumatin into a balanced diet emphasizes the importance of diverse, health-conscious food choices and the role of natural sweeteners in achieving dietary goals."
-    },
-    studiesAndReferences: [
-      {
-        title: "EFSA Panel on Thaumatin Safety",
-        link: "https://www.efsa.europa.eu/en/efsajournal/pub/nd",
-        text: "The European Food Safety Authority provides an assessment of thaumatin, affirming its safety and suitability for use in a variety of food and beverage products."
-      }
-    ],
-    breakdownUponDigestion: {
-      text: "As a protein, thaumatin is digested similarly to other dietary proteins, broken down into amino acids by the body's enzymatic processes without producing harmful byproducts."
-    },
-    amountsInCommonItems: {
-      text: "Due to its high potency, thaumatin is used in trace amounts in food products, significantly reducing the need for sugar without compromising on sweetness."
-    },
-    comparisonWithNaturalFoods: {
-      text: "Thaumatin stands out for its natural origin and functionality as a sweetener and flavor enhancer, providing a sweet taste that is difficult to achieve with conventional sugar or other natural sweeteners."
-    }
+  id: 6,
+  name: "Thaumatin",
+  type: "Natural Sweeteners",
+  overview: {
+    generalInfo: "Thaumatin is a sweet-tasting protein derived from the katemfe fruit of West Africa. It's notable for being approximately 2000 times sweeter than sugar, making it one of the most potent sweeteners available.",
+    history: "Used traditionally in West Africa to sweeten foods, thaumatin's unique properties were recognized by the global food industry in the 1970s. It has since been employed not only for its sweetness but also for its flavor-enhancing qualities.",
+    notablePoints: "Thaumatin is distinguished by its completely natural origin and its ability to improve the overall taste profile of foods and beverages, beyond just providing sweetness. It is also heat-stable and maintains its sweetness in a wide pH range."
   },
+  sweetnessRelativeToSugar: {
+    value: 2000,
+    text: "The intense sweetness of thaumatin allows for its use in very small quantities to achieve significant sweetening effects, contributing to calorie reduction and sugar replacement in diets."
+  },
+  generalSafety: "Thaumatin is recognized as safe by various international regulatory bodies. Its natural origin and extensive use in foods have supported its acceptance as a safe additive for enhancing flavor and sweetness.",
+  safeDosage: {
+    amount: 10,
+    text: "Due to its natural origin and the small amounts required for sweetening, a specific ADI for thaumatin has not been established, reflecting its wide margin of safety."
+  },
+  practicalSafeDosageExample: {
+    text: "Given the lack of a specified ADI and the minute quantities needed for effective sweetening, the risk of consuming excessive amounts of thaumatin is exceptionally low under normal dietary conditions."
+  },
+  benefitsComparedToSugar: {
+    list: [
+      "Supports reductions in calorie and sugar intake without compromising taste.",
+      "Does not affect blood glucose levels, offering a sweetening option for individuals with diabetes.",
+      "Contributes positively to dental health by not promoting tooth decay."
+    ],
+    text: "Thaumatin presents a natural, effective alternative to sugar, enabling consumers to enjoy sweetness with added health benefits."
+  },
+  primaryUses: "Primarily used in chewing gum, dairy products, and as a flavor enhancer in beverages, thaumatin's application extends to a broad range of products seeking natural sweetening solutions.",
+  approvalByGoverningBodies: {
+    details: [
+      { country: "EU", name: "European Food Safety Authority (EFSA)", link: "https://www.efsa.europa.eu/" },
+      { country: "USA", name: "U.S. Food and Drug Administration (FDA)", link: "https://www.fda.gov/" },
+      { country: "UK", name: "Food Standards Agency", link: "https://www.food.gov.uk/" }
+    ],
+    text: "Despite its relatively recent introduction to the market, thaumatin has gained approval from major health organizations, underlining its safety and efficacy as a sweetener and flavor enhancer."
+  },
+  mythsVsFacts: {
+    myth: "Natural sweeteners like thaumatin can cause the same health issues as artificial sweeteners.",
+    fact: "Thaumatin, derived from a natural source, has been shown to be safe for consumption. It provides a healthful alternative to both sugar and synthetic sweeteners, without the associated risks."
+  },
+  sugarComparisons: {
+    context: "Thaumatin's role goes beyond sweetening, enhancing flavors and improving product profiles, offering a multifaceted benefit not achievable with sugar or other sweeteners.",
+    healthImplications: {
+      text: "Utilizing thaumatin can aid in reducing caloric intake and managing health concerns related to sugar consumption, such as obesity and diabetes, contributing to a healthier lifestyle."
+    },
+    broaderPerspective: "Incorporating thaumatin into a balanced diet emphasizes the importance of diverse, health-conscious food choices and the role of natural sweeteners in achieving dietary goals."
+  },
+  studiesAndReferences: [
+    {
+      title: "EFSA Panel on Thaumatin Safety",
+      link: "https://www.efsa.europa.eu/en/efsajournal/pub/nd",
+      text: "The European Food Safety Authority provides an assessment of thaumatin, affirming its safety and suitability for use in a variety of food and beverage products."
+    }
+  ],
+  breakdownUponDigestion: {
+    text: "As a protein, thaumatin is digested similarly to other dietary proteins, broken down into amino acids by the body's enzymatic processes without producing harmful byproducts."
+  },
+  amountsInCommonItems: {
+    text: "Due to its high potency, thaumatin is used in trace amounts in food products, significantly reducing the need for sugar without compromising on sweetness."
+  },
+  comparisonWithNaturalFoods: {
+    text: "Thaumatin stands out for its natural origin and functionality as a sweetener and flavor enhancer, providing a sweet taste that is difficult to achieve with conventional sugar or other natural sweeteners."
+  }
+}
+  ,
   {
     id: 7,
     name: "Neohesperidine DC",
@@ -560,7 +551,7 @@ export const sweeteners = [
       text: "Recognized as safe by food safety authorities, Neohesperidine DC's consumption within recommended limits has not shown adverse effects, endorsing its use in food and drink products."
     },
     safeDosage: {
-      amount: "5 mg/kg of body weight per day",
+      amount: 5,
       text: "This ADI ensures that Neohesperidine DC can be safely consumed daily without health risks, supporting its inclusion in dietary products."
     },
     practicalSafeDosageExample: {
@@ -628,7 +619,7 @@ export const sweeteners = [
       text: "Extensively studied and reviewed by global food safety authorities, Neotame has been deemed safe for consumption within the established acceptable daily intake (ADI) guidelines."
     },
     safeDosage: {
-      amount: "2 mg/kg of body weight per day",
+      amount: 2,
       text: "The ADI for Neotame reflects its safe consumption level, allowing individuals to enjoy sweetened products without exceeding health risk thresholds."
     },
     practicalSafeDosageExample: {
@@ -702,7 +693,7 @@ export const sweeteners = [
       text: "Recognized as safe by food safety authorities, the salt of aspartame-acesulfame's consumption within established limits has shown no adverse effects, supporting its use in food and beverage applications."
     },
     safeDosage: {
-      amount: "Acceptable daily intake not specifically established for the salt but adheres to the guidelines for its individual components.",
+      amount: 10,
       text: "Given the blend's components, aspartame and acesulfame K, have their own ADIs, the compound's use is regulated based on these standards, ensuring consumer safety."
     },
     practicalSafeDosageExample: {
@@ -769,7 +760,7 @@ export const sweeteners = [
       text: "Extensive testing and regulatory review have established Advantame's safety for the general population, including pregnant women and children, within the acceptable daily intake (ADI) guidelines."
     },
     safeDosage: {
-      amount: "32.8 mg/kg of body weight per day",
+      amount:33,
       text: "The established ADI for Advantame reflects its safe consumption level, allowing for substantial usage without approaching health risk thresholds."
     },
     practicalSafeDosageExample: {
@@ -843,7 +834,7 @@ export const sweeteners = [
       text: "Extensive research and regulatory review have established the safety of steviol glycosides for the general population, including pregnant women and children, within acceptable daily intake (ADI) guidelines."
     },
     safeDosage: {
-      amount: "4 mg/kg of body weight per day",
+      amount:4,
       text: "The ADI for steviol glycosides is set to ensure that daily consumption remains within a safe range, allowing consumers to enjoy sweetened products without health risks."
     },
     practicalSafeDosageExample: {
@@ -912,7 +903,7 @@ export const sweeteners = [
       text: "Similar to naturally extracted steviol glycosides, the enzymatically produced variants have undergone rigorous safety assessments and have been deemed safe for consumption by health authorities worldwide."
     },
     safeDosage: {
-      amount: "4 mg/kg of body weight per day",
+      amount: 4,
       text: "The acceptable daily intake (ADI) for these sweeteners, like that of naturally extracted steviol glycosides, ensures they can be consumed safely within these guidelines."
     },
     practicalSafeDosageExample: {
@@ -980,7 +971,7 @@ export const sweeteners = [
       text: "Recognized as safe by various health authorities, polyglycitol syrup can be included in the diet within reasonable consumption limits to avoid gastrointestinal discomfort, which is common with overconsumption of sugar alcohols."
     },
     safeDosage: {
-      amount: "Not specifically established, varies based on individual tolerance.",
+      amount: 10,
       text: "While there is no specified ADI for polyglycitol syrup, moderate consumption is recommended to minimize digestive upset."
     },
     practicalSafeDosageExample: {

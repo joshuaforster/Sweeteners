@@ -1,3 +1,5 @@
+
 export function newParams(objects, id) {
-    return objects.find(object => id.toString() === object.id.toString());
+    return objects.find(object => JSON.parse(id) === object.id);
 }
+
