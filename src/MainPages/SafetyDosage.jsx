@@ -8,28 +8,31 @@ import SliderSizes from '../CustomComponents/slider.jsx';
 export default function SafetyDosage() {
     const { id } = useParams();
     const sweetener = newParams(sweeteners, id);
-    console.log(sweetener.safeDosage.amount)
-  
+   const [weight, setWeight] = React.useState(70); // Default weight to 70kg
+
+    const handleSliderChange = (event, newValue) => {
+        setWeight(newValue);
+    };
+
+    // Calculate the safe dosage based on weight
+    const safeDosageForWeight = sweetener ? sweetener.safeDosage.amount * weight : 0;
+
     return (
         <div className="flex flex-col items-center min-h-screen p-4">
             {sweetener ? (
                 <>
                     <div className="text-center">
-                        <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 mb-4">Safe Dosage</h1>
-                        {sweetener.safeDosage ? (
-                            <p className="text-md md:text-lg text-gray-700">
-                                {sweetener.safeDosage.text}
-                            </p>
-                        ) : (
-                            <p className="text-md md:text-lg text-gray-700">
-                                No safe dosage information available.
-                            </p>
-                        )}
+                        <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 mb-4">{sweetener.name} - Safe Dosage</h1>
+                        <p className="text-md md:text-lg text-gray-700">
+                            Based on your weight, you can safely consume up to {safeDosageForWeight} mg of {sweetener.name} per day.
+                        </p>
                     </div>
-                    {/* Conditionally render SliderSizes if there is specific data it needs to use */}
-                    {sweetener.safeDosage && (
-                        <SliderSizes value={sweetener.safeDosage.amount} />
-                    )}
+                    <SliderSizes
+                        defaultValue={70}
+                        min={40}
+                        max={120}
+                        onChange={handleSliderChange}
+                    />
                 </>
             ) : (
                 <p className="text-xl text-red-500">
