@@ -9,7 +9,7 @@ export default function SweetenerDetails() {
 
     return (
         <div className="container mx-auto px-4">
-            <nav className="flex flex-wrap justify-between items-center py-4">
+            <nav className="flex overflow-x-auto py-4 space-x-4 whitespace-nowrap no-scrollbar">
                 <Link to={`/header/${id}`} className="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out">Overview</Link>
                 <Link to={`/header/${id}/general-info`} className="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out">General Info</Link>
                 <Link to={`/header/${id}/safety-dosage`} className="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out">Safety and Dosage</Link>
@@ -18,6 +18,7 @@ export default function SweetenerDetails() {
                 <Link to={`/header/${id}/studies-references`} className="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out">Scientific Studies and References</Link>
                 <Link to={`/header/${id}/comparisons-context`} className="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out">Comparisons and Context</Link>
             </nav>
+
             <div className="my-4">
                 <Link to='..' className="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">← Back to all sweeteners</Link>
             </div>

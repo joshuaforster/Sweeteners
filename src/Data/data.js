@@ -14,9 +14,11 @@ export const sweeteners = [
     },
     generalSafety: 'Approved by various global health and safety organizations for general use in food and beverages, deemed safe within established acceptable daily intake (ADI) guidelines.',
     safeDosage: {
-      amount: 15,
-      text: 'The ADI for Acesulfame K is set at 15 mg/kg of body weight per day. For an average adult, this means they can safely consume a significant amount without health risks.'
-    },
+      amount: 15, // mg per kg of body weight
+      productExample: {
+        name: 'Diet Soda',
+        sweetenerAmountPerUnit: 40, // Assuming 40 mg of Acesulfame K per can of Diet Soda
+      }},
     practicalSafeDosageExample: {
       amountPer70kgAdult: 1050,
       equivalentInDietSoda: 26,
@@ -106,7 +108,7 @@ export const sweeteners = [
       ],
       explanatoryText: 'The methanol content found in natural foods and beverages due to the breakdown of pectin significantly exceeds the trace amounts one might ingest from sweeteners in diet products. This context is important when considering the safety and health implications of consuming products sweetened with artificial sweeteners like Acesulfame K.'
     }
-  },
+    },
   {
     id: 2,
     name: "Aspartame",
@@ -122,9 +124,11 @@ export const sweeteners = [
     },
     generalSafety: "Extensive scientific research and reviews by regulatory bodies worldwide, including the FDA, EFSA, and WHO, have consistently confirmed aspartame's safety for the general population, including pregnant women and children, within established acceptable daily intake (ADI) guidelines.",
     safeDosage: {
-      amount: 40,
-      text: "The ADI for aspartame, established by the FDA and EFSA, is considered safe for daily consumption without posing health risks to consumers."
-    },
+      amount: 15, // mg per kg of body weight
+      productExample: {
+        name: 'Diet Soda',
+        sweetenerAmountPerUnit: 40, // Assuming 40 mg of Aspartame per can of Diet Soda
+      }},
     practicalSafeDosageExample: {
       text: "An adult weighing 70 kg can safely consume up to 2,800 mg of aspartame per day, equivalent to about 14 cans of a diet soda, far beyond typical consumption patterns."
     },
@@ -195,9 +199,11 @@ export const sweeteners = [
     },
     generalSafety: "Subject to regulatory review and approval across various jurisdictions, Cyclamic Acid has been deemed safe for consumption within certain limits, reinstating its status as a viable sugar substitute in numerous markets.",
     safeDosage: {
-      amount: 11,
-      text: "The acceptable daily intake (ADI) for Cyclamic Acid is set conservatively to ensure consumer safety, allowing for its use in a wide range of food and beverage products."
-    },
+      amount: 11, // mg per kg of body weight
+      productExample: {
+        name: 'Sugar-Free Yogurt',
+        sweetenerAmountPerUnit: 20, // Assuming 20 mg of Cyclamic Acid per serving of Sugar-Free Yogurt
+      }},
     practicalSafeDosageExample: {
       amountPer70kgAdult: 770,
       equivalentInDietSoda: "Varies significantly based on product formulation",
@@ -268,9 +274,13 @@ export const sweeteners = [
     },
     generalSafety: "Decades of research have confirmed the safety of saccharin for human consumption. Major health organizations, including the WHO and the FDA, have determined that saccharin is safe to use within the recommended limits.",
     safeDosage: {
-      amount: 5,
-      text: "The acceptable daily intake (ADI) for saccharin ensures it can be consumed daily within this limit without posing a health risk, even over a lifetime."
-    },
+      amount: 5, // mg per kg of body weight
+      text: "The acceptable daily intake (ADI) for saccharin ensures it can be consumed daily within this limit without posing a health risk, even over a lifetime.",
+      productExample: {
+          name: 'Sugar-Free Gum',
+          sweetenerAmountPerUnit: 2, // Assuming 2 mg of Saccharin per piece of Sugar-Free Gum
+      }
+  },
     practicalSafeDosageExample: {
       amountPer70kgAdult: 350,
       equivalentInDietSoda: "Approximately 9 to 12 cans, depending on the brand and formulation",
@@ -341,9 +351,14 @@ export const sweeteners = [
     },
     generalSafety: "Extensive scientific research and regulatory review have affirmed sucralose's safety for the general population, including individuals with diabetes, pregnant women, and children, within the acceptable daily intake (ADI) limits.",
     safeDosage: {
-      amount: 5,
-      text: "The ADI for sucralose is set at a level that can be consumed every day over a lifetime without posing a risk to health."
-    },
+      amount: 5, // mg per kg of body weight
+      text: "The ADI for sucralose is set at a level that can be consumed every day over a lifetime without posing a risk to health.",
+      productExample: {
+          name: 'Sugar-Free Soda',
+          sweetenerAmountPerUnit: 50, // Assuming 50 mg of Sucralose per can of Sugar-Free Soda
+      }
+  }
+  ,
     practicalSafeDosageExample: {
       amountPer70kgAdult: 350,
       equivalentInDietSoda: "Approximately 40 to 60 cans, depending on the brand and formulation",
@@ -414,7 +429,7 @@ export const sweeteners = [
     },
     generalSafety: "Thaumatin is recognized as safe by various international regulatory bodies. Its natural origin and extensive use in foods have supported its acceptance as a safe additive for enhancing flavor and sweetness.",
     safeDosage: {
-    amount: 10,
+    amount: '',
     text: "Due to its natural origin and the small amounts required for sweetening, a specific ADI for thaumatin has not been established, reflecting its wide margin of safety."
     },
     practicalSafeDosageExample: {
@@ -482,9 +497,13 @@ export const sweeteners = [
       },
       generalSafety: "Recognized as safe by food safety authorities, Neohesperidine DC's consumption within recommended limits has not shown adverse effects, endorsing its use in food and drink products.",
       safeDosage: {
-        amount: 5,
-        text: "This ADI ensures that Neohesperidine DC can be safely consumed daily without health risks, supporting its inclusion in dietary products."
-      },
+        amount: 5, // mg per kg of body weight
+        text: "This ADI ensures that Neohesperidine DC can be safely consumed daily without health risks, supporting its inclusion in dietary products.",
+        productExample: {
+            name: 'Sugar-Free Chewing Gum',
+            sweetenerAmountPerUnit: 10, // Assuming 10 mg of Neohesperidine DC per serving of Sugar-Free Chewing Gum
+        }
+    },
       practicalSafeDosageExample: {
         amountPer70kgAdult: 350,
         equivalentInDietSoda: "Given its potency, the equivalent in diet soda would significantly exceed typical consumption patterns, underscoring its safety margin."
@@ -539,7 +558,14 @@ export const sweeteners = [
       },
       sweetnessRelativeToSugar: "The extraordinary sweetness of Neotame allows for its use in tiny quantities, making it a highly effective sweetening agent in a wide range of products.",
       generalSafety: "Extensively studied and reviewed by global food safety authorities, Neotame has been deemed safe for consumption within the established acceptable daily intake (ADI) guidelines.",
-      safeDosage: "The ADI for Neotame reflects its safe consumption level, allowing individuals to enjoy sweetened products without exceeding health risk thresholds.",
+      safeDosage: {
+        amount: 5, // mg per kg of body weight
+        text: "The ADI for Neotame reflects its safe consumption level, allowing individuals to enjoy sweetened products without exceeding health risk thresholds.",
+        productExample: {
+            name: 'Sugar-Free Chewing Gum',
+            sweetenerAmountPerUnit: 2, // Assuming 2 mg of Neotame per piece of Sugar-Free Chewing Gum
+        },
+    },
       practicalSafeDosageExample: "Given Neotame's high sweetness, the equivalent in diet soda would vastly exceed normal consumption patterns, emphasizing its safety margin.",
       benefitsComparedToSugar: [
         "Contributes to significant calorie reduction in the diet.",
@@ -574,7 +600,13 @@ export const sweeteners = [
       },
       sweetnessRelativeToSugar: "The enhanced sweetness level allows for its use in smaller amounts, providing significant calorie reduction in products sweetened with this compound.",
       generalSafety: "Recognized as safe by food safety authorities, the salt of aspartame-acesulfame's consumption within established limits has shown no adverse effects, supporting its use in food and beverage applications.",
-      safeDosage: "Given the blend's components, aspartame and acesulfame K, have their own ADIs, the compound's use is regulated based on these standards, ensuring consumer safety.",
+      safeDosage: {
+        amount: "Given the blend's components, aspartame and acesulfame K, have their own ADIs, the compound's use is regulated based on these standards, ensuring consumer safety.",
+        productExample: {
+            name: 'Sugar-Free Soft Drink Mix',
+            sweetenerAmountPerUnit: 30, // Assuming 30 mg of Salt of Aspartame-Acesulfame per packet of Sugar-Free Soft Drink Mix
+        },
+    },
       practicalSafeDosageExample: "The amount of Salt of Aspartame-Acesulfame consumed in diet products is far below the ADI levels for aspartame and acesulfame K, indicating a wide margin of safety for daily intake.",
       benefitsComparedToSugar: [
         "Enables a significant reduction in the caloric content of sweetened products.",
@@ -609,11 +641,15 @@ export const sweeteners = [
         value: 20000,
         text: "Advantame's extreme sweetness efficiency means it can be used sparingly to achieve the desired taste, making it an economical and health-conscious choice for manufacturers and consumers alike."
       },
-      generalSafety: "Extensive testing and regulatory review have established Advantame's safety for the general population, including pregnant women and children, within the acceptable daily intake (ADI) guidelines.",
       safeDosage: {
-        amount: 33,
-        text: "The established ADI for Advantame reflects its safe consumption level, allowing for substantial usage without approaching health risk thresholds."
-      },
+        amount: 33, // mg per kg of body weight
+        text: "The established ADI for Advantame reflects its safe consumption level, allowing for substantial usage without approaching health risk thresholds.",
+        productExample: {
+            name: 'Sugar-Free Chewing Gum',
+            sweetenerAmountPerUnit: 5, // Assuming 5 mg of Advantame per piece of Sugar-Free Chewing Gum
+        },
+    },
+    generalSafety: "Extensive testing and regulatory review have established Advantame's safety for the general population, including pregnant women and children, within the acceptable daily intake (ADI) guidelines.",
       practicalSafeDosageExample: {
         amountPer70kgAdult: 2296,
         equivalentInDietSoda: "Given Advantame's potency, the equivalent in diet soda would be astronomically high, far exceeding normal consumption patterns."
@@ -652,11 +688,14 @@ export const sweeteners = [
         value: 300,
         text: "The high sweetness level of steviol glycosides means that they can be used in very small amounts to achieve the desired sweetness, reducing the need for sugars in foods and beverages."
       },
-      generalSafety: "Extensive research and regulatory review have established the safety of steviol glycosides for the general population, including pregnant women and children, within acceptable daily intake (ADI) guidelines.",
       safeDosage: {
-        amount: 4,
-        text: "The ADI for steviol glycosides is set to ensure that daily consumption remains within a safe range, allowing consumers to enjoy sweetened products without health risks."
-      },
+        amount: 4, // mg per kg of body weight
+        text: "The ADI for steviol glycosides is set to ensure that daily consumption remains within a safe range, allowing consumers to enjoy sweetened products without health risks.",
+        productExample: {
+            name: 'Stevia-Sweetened Tea',
+            sweetenerAmountPerUnit: 2, // Assuming 2 mg of steviol glycosides per cup of Stevia-Sweetened Tea
+        },
+    },
       practicalSafeDosageExample: {
         amountPer70kgAdult: 280,
         equivalentInDietSoda: "The equivalent safe daily intake for a 70 kg adult would translate to consuming an exceptionally large amount of diet soda sweetened with stevia, well beyond typical consumption patterns."
@@ -737,9 +776,13 @@ export const sweeteners = [
       },
       generalSafety: "Recognized as safe by various health authorities, polyglycitol syrup can be included in the diet within reasonable consumption limits to avoid gastrointestinal discomfort, which is common with overconsumption of sugar alcohols.",
       safeDosage: {
-        amount: 10,
-        text: "While there is no specified ADI for polyglycitol syrup, moderate consumption is recommended to minimize digestive upset."
-      },
+        amount: 10, // mg per kg of body weight
+        text: "While there is no specified ADI for polyglycitol syrup, moderate consumption is recommended to minimize digestive upset.",
+        productExample: {
+            name: 'Sugar-Free Candy',
+            sweetenerAmountPerUnit: 15, // Assuming 15 mg of polyglycitol syrup per serving of Sugar-Free Candy
+        },
+    },
       practicalSafeDosageExample: "Individual tolerance levels vary, but staying below 50 grams per day can help prevent gastrointestinal symptoms for most people.",
       benefitsComparedToSugar: [
         "Provides a lower-calorie alternative to sugar, supporting weight management goals.",
@@ -775,9 +818,13 @@ export const sweeteners = [
       },
       generalSafety: "Sorbitol is recognized as safe for consumption by food safety authorities worldwide. However, excessive consumption can lead to digestive discomfort, including gas and bloating.",
       safeDosage: {
-        amount: 50,
-        text: "While sorbitol is safe for daily consumption, individuals are advised to consume it in moderation to avoid gastrointestinal side effects."
-      },
+        amount: 50, // mg per kg of body weight
+        text: "While sorbitol is safe for daily consumption, individuals are advised to consume it in moderation to avoid gastrointestinal side effects.",
+        productExample: {
+            name: 'Sugar-Free Chewing Gum',
+            sweetenerAmountPerUnit: 2, // Assuming 2 mg of sorbitol per piece of Sugar-Free Chewing Gum
+        },
+    },
       practicalSafeDosageExample: "Moderation is key, as consuming more than 50 grams of sorbitol daily can lead to digestive issues for some people.",
       benefitsComparedToSugar: [
         "Lower calorie content than sugar, aiding in weight management.",
@@ -813,9 +860,13 @@ export const sweeteners = [
       },
       generalSafety: "Recognized as safe for consumption, sorbitol syrup is well-tolerated when used within recommended guidelines. Excessive intake may lead to gastrointestinal discomfort.",
       safeDosage: {
-        amount: 50,
-        text: "Consumers are advised to moderate their intake of sorbitol syrup to avoid potential digestive issues, with recommendations typically suggesting a limit similar to that of sorbitol."
-      },
+        amount: 50, // mg per kg of body weight
+        text: "Consumers are advised to moderate their intake of sorbitol syrup to avoid potential digestive issues, with recommendations typically suggesting a limit similar to that of sorbitol.",
+        productExample: {
+            name: 'Sugar-Free Syrup',
+            sweetenerAmountPerUnit: 10, // Assuming 10 mg of sorbitol syrup per tablespoon of Sugar-Free Syrup
+        },
+    },
       practicalSafeDosageExample: "Consuming products containing sorbitol syrup in moderation is key to avoiding gastrointestinal side effects while enjoying its sweetening benefits.",
       benefitsComparedToSugar: [
         "Helps reduce caloric intake compared to sugar, supporting weight management efforts.",
@@ -851,9 +902,13 @@ export const sweeteners = [
       },
       generalSafety: "The FDA and other international food safety authorities recognize mannitol as safe for consumption within the recommended daily intake levels. Excessive consumption may lead to digestive discomfort.",
       safeDosage: {
-        amount: 20,
-        text: "While mannitol is safe, consumers should be mindful of its laxative effect when consumed in large amounts. The recommended daily intake should not exceed 20g to prevent gastrointestinal issues."
-      },
+        amount: 20, // grams per day
+        text: "While mannitol is safe, consumers should be mindful of its laxative effect when consumed in large amounts. The recommended daily intake should not exceed 20g to prevent gastrointestinal issues.",
+        productExample: {
+            name: 'Mannitol Chewing Gum',
+            sweetenerAmountPerUnit: 1, // Assuming 1g of mannitol per piece of Mannitol Chewing Gum
+        },
+    },
       practicalSafeDosageExample: "Moderation is key in consuming mannitol-containing products to avoid potential laxative effects, making it suitable for various dietary needs without compromising on sweetness.",
       benefitsComparedToSugar: [
         "Supports weight management by providing a low-calorie alternative to sugar.",
@@ -889,9 +944,13 @@ export const sweeteners = [
       },
       generalSafety: "The FDA and European Food Safety Authority (EFSA) recognize Isomalt as safe for general food use. Like other sugar alcohols, excessive consumption can lead to digestive issues.",
       safeDosage: {
-        amount: 30,
-        text: "Consumption of Isomalt should be moderated to avoid gastrointestinal discomfort. A daily intake of up to 30 grams is considered safe for most adults."
-      },
+        amount: 30, // grams per day
+        text: "Consumption of Isomalt should be moderated to avoid gastrointestinal discomfort. A daily intake of up to 30 grams is considered safe for most adults.",
+        productExample: {
+            name: 'Sugar-Free Hard Candy',
+            sweetenerAmountPerUnit: 5, // Assuming 5g of Isomalt per serving of Sugar-Free Hard Candy
+        },
+    },
       practicalSafeDosageExample: "Staying within the safe consumption guidelines allows individuals to enjoy the benefits of Isomalt-sweetened products without the risk of digestive distress.",
       benefitsComparedToSugar: [
         "Lower calorie content helps in managing overall caloric intake.",
@@ -925,11 +984,15 @@ export const sweeteners = [
         value: 90,
         text: "Maltitol is about 90% as sweet as sugar, which makes it one of the closer alternatives to sugar in terms of taste and texture."
       },
-      generalSafety: "Recognized as safe by food safety authorities worldwide, Maltitol's consumption is generally well tolerated. However, like other polyols, it can lead to digestive discomfort if consumed in large quantities.",
       safeDosage: {
-        amount: 30,
-        text: "A daily intake of up to 30 grams is considered safe for most people, beyond which it may cause laxative effects."
-      },
+        amount: 30, // grams per day
+        text: "A daily intake of up to 30 grams is considered safe for most people, beyond which it may cause laxative effects.",
+        productExample: {
+            name: 'Sugar-Free Chocolate',
+            sweetenerAmountPerUnit: 10, // Assuming 10g of Maltitol per serving of Sugar-Free Chocolate
+        },
+    },
+    
       practicalSafeDosageExample: "Moderate consumption of Maltitol-containing products allows for enjoyment of sweet foods with minimal risk of gastrointestinal upset.",
       benefitsComparedToSugar: [
         "Contributes to a reduced calorie intake, aiding in weight management.",
@@ -963,11 +1026,14 @@ export const sweeteners = [
         value: 75,
         text: "Maltitol syrup is approximately 75% as sweet as sugar, making it an effective sweetener for a wide range of applications."
       },
-      generalSafety: "Widely recognized as safe for consumption, maltitol syrup is nevertheless capable of causing digestive discomfort if consumed in excess due to its sugar alcohol content.",
       safeDosage: {
-        amount: 25,
-        text: "A daily intake of up to 25 grams is advised to minimize the risk of gastrointestinal issues, such as bloating or laxative effects."
-      },
+        amount: 10, // grams per day
+        text: "While there is no specified ADI for maltitol syrup, moderate consumption is recommended to minimize digestive upset.",
+        productExample: {
+            name: 'Sugar-Free Chocolate',
+            sweetenerAmountPerUnit: 20, // Assuming 20g of Maltitol syrup per serving of Sugar-Free Chocolate
+        },
+    },    
       practicalSafeDosageExample: "Incorporating maltitol syrup into one's diet allows for the enjoyment of sweetened products without exceeding recommended sugar intake levels.",
       benefitsComparedToSugar: [
         "Reduces calorie intake while maintaining sweetness, aiding in weight management.",
@@ -1003,9 +1069,13 @@ export const sweeteners = [
       },
       generalSafety: "Recognized as safe for consumption, lactitol is nonetheless recommended to be consumed within moderation to avoid potential digestive discomfort, as is common with many sugar alcohols.",
       safeDosage: {
-        amount: 30,
-        text: "An intake of up to 30 grams per day is generally considered safe, with minimal risk of gastrointestinal side effects for most individuals."
-      },
+        amount: 30, // grams per day
+        text: "An intake of up to 30 grams per day is generally considered safe, with minimal risk of gastrointestinal side effects for most individuals.",
+        productExample: {
+            name: 'Sugar-Free Ice Cream',
+            sweetenerAmountPerUnit: 15, // Assuming 15g of Lactitol per serving of Sugar-Free Ice Cream
+        },
+    },    
       practicalSafeDosageExample: "Using lactitol in place of sugar allows for enjoyment of sweet flavors in various products, without significantly adding to daily caloric intake or impacting blood sugar levels.",
       benefitsComparedToSugar: [
         "Contributes significantly less to caloric intake, aiding in weight management.",
@@ -1041,9 +1111,13 @@ export const sweeteners = [
       },
       generalSafety: "Xylitol is considered safe for human consumption, but it can cause digestive discomfort if consumed in large amounts due to its laxative effect.",
       safeDosage: {
-        amount: 50,
-        text: "A daily intake of up to 50 grams is generally well tolerated by most people, though sensitivity varies and lower amounts are recommended for individuals new to consuming xylitol."
-      },
+        amount: 50, // grams per day
+        text: "A daily intake of up to 50 grams is generally well tolerated by most people, though sensitivity varies and lower amounts are recommended for individuals new to consuming xylitol.",
+        productExample: {
+            name: 'Sugar-Free Chewing Gum',
+            sweetenerAmountPerUnit: 2, // Assuming 2g of Xylitol per piece of Sugar-Free Chewing Gum
+        },
+    },
       practicalSafeDosageExample: "For a person weighing 70kg, this safe intake level allows for the consumption of numerous xylitol-sweetened products throughout the day without adverse effects.",
       benefitsComparedToSugar: [
         "Promotes dental health by reducing cavities and reversing the progression of early cavities.",

@@ -14,8 +14,15 @@ export default function SafetyDosage() {
         setWeight(newValue);
     };
 
+
     // Calculate the safe dosage based on weight
     const safeDosageForWeight = sweetener ? sweetener.safeDosage.amount * weight : 0;
+
+    // Ensure sweetener and its nested properties are defined before accessing them
+    const foodItems = sweetener && sweetener.safeDosage && sweetener.safeDosage.productExample
+        ? (safeDosageForWeight / sweetener.safeDosage.productExample.sweetenerAmountPerUnit).toFixed(2)
+        : 0;
+
 
     return (
         <div className="flex flex-col items-center min-h-screen p-4">
@@ -23,16 +30,22 @@ export default function SafetyDosage() {
                 <>
                     <div className="text-center">
                         <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 mb-4">{sweetener.name} - Safe Dosage</h1>
-                        <p className="text-md md:text-lg text-gray-700">
-                            Based on your weight, you can safely consume up to {safeDosageForWeight} mg of {sweetener.name} per day.
-                        </p>
                     </div>
+                    <p className="text-md md:text-lg text-gray-700">
+                        Slide your weight (KG) to see how much {sweetener.name} you can consume per day
+                    </p>
                     <SliderSizes
                         defaultValue={70}
                         min={40}
-                        max={120}
+                        max={150}
                         onChange={handleSliderChange}
                     />
+                    <p className="text-md md:text-lg text-gray-700">
+                        Based on your weight, you can safely consume up to {safeDosageForWeight} mg of {sweetener.name} per day.
+                    </p>
+                    <p className="text-md md:text-lg text-gray-700">
+                       That is the equivalent of {foodItems} {sweetener.safeDosage.productExample.name}s per day
+                    </p>
                 </>
             ) : (
                 <p className="text-xl text-red-500">
