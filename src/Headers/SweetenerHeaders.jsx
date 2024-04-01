@@ -1,30 +1,36 @@
 import React from 'react';
-import { useParams, Link, Outlet } from 'react-router-dom';
+import { useParams, NavLink, Outlet } from 'react-router-dom';
 import { newParams } from '../CustomComponents/useparams.jsx'; // Update the import path as necessary
 import { sweeteners } from '../Data/data.js';
+import LayoutSection from '../CustomComponents/layoutSection.jsx';
 
 export default function SweetenerDetails() {
     const { id } = useParams();
     const sweetener = newParams(sweeteners, id);
 
-    return (
-        <div className="container mx-auto px-4">
-            <nav className="flex overflow-x-auto py-4 space-x-4 whitespace-nowrap no-scrollbar">
-                <Link to={`/header/${id}`} className="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out">Overview</Link>
-                <Link to={`/header/${id}/general-info`} className="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out">General Info</Link>
-                <Link to={`/header/${id}/safety-dosage`} className="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out">Safety and Dosage</Link>
-                <Link to={`/header/${id}/benefits-uses`} className="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out">Benefits and Uses</Link>
-                <Link to={`/header/${id}/myths-facts`} className="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out">Myths vs. Facts</Link>
-                <Link to={`/header/${id}/studies-references`} className="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out">Scientific Studies and References</Link>
-                <Link to={`/header/${id}/comparisons-context`} className="text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out">Comparisons and Context</Link>
-            </nav>
+    // Function to dynamically set the class names based on the active state
+    const getNavLinkClass = ({ isActive }) => isActive ? "border border-gray-300 shadow-sm px-4 py-2 text-white font-bold bg-blue-500 hover:bg-blue-700 transition duration-300 ease-in-out" : "border border-gray-300 shadow-sm px-4 py-2 text-blue-500 hover:text-blue-700 transition duration-300 ease-in-out";
 
-            <div className="my-4">
-                <Link to='..' className="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">← Back to all sweeteners</Link>
-            </div>
-            <h1 className="text-3xl font-semibold mb-4">{sweetener.name}</h1>
+    return (
+        <section>
+            <LayoutSection>
+                <h1 className="text-3xl font-semibold mb-4">{sweetener.name}</h1>
+                <nav className="flex overflow-x-auto py-4 space-x-4 whitespace-nowrap no-scrollbar">
+                    <NavLink to={`/header/${id}`} className={getNavLinkClass} end>Overview</NavLink>
+                    <NavLink to={`/header/${id}/general-info`} className={getNavLinkClass}>General Info</NavLink>
+                    <NavLink to={`/header/${id}/safety-dosage`} className={getNavLinkClass}>Safety and Dosage</NavLink>
+                    <NavLink to={`/header/${id}/benefits-uses`} className={getNavLinkClass}>Benefits and Uses</NavLink>
+                    <NavLink to={`/header/${id}/myths-facts`} className={getNavLinkClass}>Myths vs. Facts</NavLink>
+                    <NavLink to={`/header/${id}/approval`} className={getNavLinkClass}>Approving Bodies</NavLink>
+                    <NavLink to={`/header/${id}/studies-references`} className={getNavLinkClass}>Scientific Studies and References</NavLink>
+                    <NavLink to={`/header/${id}/comparisons-context`} className={getNavLinkClass}>Comparisons and Context</NavLink>
+                </nav>
+
+                <div className="my-4">
+                    <NavLink to='..' className="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">← Back to all sweeteners</NavLink>
+                </div>
+            </LayoutSection>
             <Outlet />
-        </div>
+        </section>
     );
 }
-

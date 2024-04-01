@@ -5,23 +5,23 @@ import { newParams } from '../CustomComponents/useparams.jsx'; // Update the imp
 import LayoutSection from '../CustomComponents/layoutSection.jsx';
 import Sidebar from '../CustomComponents/sidebar.jsx';
 
-export default function Studies() {
+export default function Approval() {
     const { id } = useParams();
     const sweetener = newParams(sweeteners, id);
 
-    const studies = sweetener.studiesAndReferences.map((study, index) => (
+    const approval = sweetener.approvalByGoverningBodies.details.map((body, index) => (
         <div key={index} className="mb-6 p-6 shadow-lg rounded-lg bg-white">
-            <h2 className="text-lg font-semibold text-indigo-600 mb-2">{study.title}</h2>
-            <a href={study.link} className="text-blue-500 hover:text-blue-700 underline">Study Link</a>
-            <p className="text-gray-800 mt-2">{study.text}</p>
+            <h2 className="text-lg font-semibold text-indigo-600 mb-2">{body.name} ({body.country})</h2>
+            <a href={body.link} className="text-blue-500 hover:text-blue-700 underline">See more</a>
         </div>
     ));
   
     return (
         <LayoutSection>
+            <h1>{sweetener.approvalByGoverningBodies.text}</h1>
             <div className="min-h-screen flex space-y-6">
                 <div className='flex flex-col'>
-                    {studies.length > 0 ? studies : <p className="text-lg text-red-500">No studies found.</p>}
+                    {approval.length > 0 ? approval : <p className="text-lg text-red-500">No studies found.</p>}
                 </div>
                 <Sidebar />
             </div>

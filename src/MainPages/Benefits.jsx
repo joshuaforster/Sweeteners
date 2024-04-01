@@ -1,25 +1,28 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { sweeteners } from '../Data/data.js';
-import { newParams } from '../CustomComponents/useparams.jsx'; // Update the import path as necessary
+import { newParams } from '../CustomComponents/useparams.jsx';
+import LayoutSection from '../CustomComponents/layoutSection.jsx';
+import Sidebar from '../CustomComponents/sidebar'; // Ensure you have this Sidebar component created
 
-export default function Benefits() {
+export default function SweetenerInfo() {
     const { id } = useParams();
     const sweetener = newParams(sweeteners, id);
-  
+
     return (
-        <section>
-            <div className="flex flex-col items-center min-h-screen p-4">
+        <LayoutSection>
+            <div className="flex min-h-screen">
+                {/* Main content wrapper */}
+                <div className="flex-1 flex flex-col">
                     {sweetener ? (
                         <>
-                            <div className="text-center">
-                                <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 mb-4">Benefits</h1>
-                                <p className="text-md md:text-lg text-gray-700">
-                                    {sweetener.benefitsComparedToSugar.text}
-                                </p>
-                            </div>
+                            <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 mb-4">Benefits</h1>
+                            <p className="text-md md:text-lg text-gray-700">
+                                {sweetener.benefitsComparedToSugar.text}
+                            </p>
+                            
                             {sweetener.benefitsComparedToSugar.list && sweetener.benefitsComparedToSugar.list.length > 0 && (
-                                <ul className="list-disc text-left mx-auto max-w-4xl mt-4">
+                                <ul>
                                     {sweetener.benefitsComparedToSugar.list.map((benefit, index) => (
                                         <li key={index} className="text-md md:text-lg text-gray-700">
                                             {benefit}
@@ -33,7 +36,11 @@ export default function Benefits() {
                             Sweetener not found.
                         </p>
                     )}
+                </div>
+                
+                {/* Sidebar */}
+                <Sidebar />
             </div>
-        </section>
+        </LayoutSection>
     );
 }
