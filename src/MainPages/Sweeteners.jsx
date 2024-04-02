@@ -67,11 +67,14 @@ export default function Sweeteners() {
                     <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">Discover Sweeteners</h2>
                     <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300">Exploring the world of sweeteners can be fascinating. This guide aims to debunk common myths and provide factual information on various sweeteners. Whether you're interested in health benefits, dietary choices, or culinary uses, here's where you can start your journey.</p>
                 </div>
-                <div className="flex justify-center gap-4 mb-8">
-                    <FilterLink to="?type=artificial%20sweeteners" filterValue="artificial sweeteners">Artificial Sweeteners</FilterLink>
-                    <FilterLink to="?type=natural%20sweeteners" filterValue="natural sweeteners">Natural Sweeteners</FilterLink>
-                    <FilterLink to="?type=sugar%20alcohol" filterValue="sugar alcohol">Sugar Alcohol</FilterLink>
-                    {typeFilter && <Link to="/" className="inline-block px-6 py-3 text-lg font-medium text-blue-700 rounded-md hover:bg-blue-100">Clear</Link>}
+                <div className="mt-8">
+                    <p className="text-center text-2xl font-bold text-gray-900 dark:text-white mb-6">Filter by Sweetener Type</p>
+                    <div className="flex flex-col lg:flex-row justify-center items-center gap-4">
+                        <FilterLink to="?type=artificial%20sweeteners" filterValue="artificial sweeteners">Artificial Sweeteners</FilterLink>
+                        <FilterLink to="?type=natural%20sweeteners" filterValue="natural sweeteners">Natural Sweeteners</FilterLink>
+                        <FilterLink to="?type=sugar%20alcohol" filterValue="sugar alcohol">Sugar Alcohol</FilterLink>
+                        {typeFilter && <Link to="/" className="px-6 py-3 text-lg font-medium text-blue-700 bg-transparent border border-blue-700 rounded-md hover:bg-blue-700 hover:text-white transition-all duration-300">Clear</Link>}
+                    </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {sweetenersArray}

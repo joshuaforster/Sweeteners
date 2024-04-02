@@ -9,21 +9,17 @@ export default function SafetyDosage() {
     const { id } = useParams();
     const sweetener = newParams(sweeteners, id);
 
-    // Safely generate a list of components, if breakdownComponents exists
-    const sweetenerComponents = sweetener.breakdownComponents ? (
+    // Generate a single list of components
+    const sweetenerComponents = (
         <ul className="list-disc pl-5">
             {sweetener.breakdownComponents.map((component, index) => (
                 <li key={index} className="mt-1">{component}</li>
             ))}
         </ul>
-    ) : <p>No breakdown components available.</p>;
+    );
 
-    function renderComparisons() {
-        // Check if comparisons data exists
-        if (!sweetener || !sweetener.comparisons || !sweetener.comparisons.NaturalComparisons) {
-            return <p>No comparison data available.</p>;
-        }
-
+    // Function to dynamically render comparisons
+    function renderComparisons(){
         return Object.entries(sweetener.comparisons).map(([component, details]) => (
             <div key={component} className="mt-4">
                 <h2 className="text-xl font-bold text-indigo-700">{component}</h2>
@@ -42,19 +38,13 @@ export default function SafetyDosage() {
 
     return (
         <LayoutSection>
-            <div className="flex justify-between min-h-screen p-5">
+            <div className="flex justify-between min-h-screen p-5 bg-gray-100">
                 <div className='flex-1'>
-                    {sweetener ? (
-                        <>
-                            <p className="text-2xl font-bold text-indigo-800 mb-4">What is {sweetener.name}?</p>
-                            {sweetenerComponents}
-                            <div className="mt-6">
-                                {renderComparisons()}
-                            </div>
-                        </>
-                    ) : (
-                        <p className="text-xl text-red-500">Sweetener not found.</p>
-                    )}
+                    <p className="text-2xl font-bold text-indigo-800 mb-4">What is {sweetener.name} broken down into?</p>
+                    {sweetenerComponents}
+                    <div className="mt-6">
+                        {renderComparisons()}
+                    </div>
                 </div>
                 <Sidebar className="w-1/4"/>
             </div>            
