@@ -1,18 +1,15 @@
 import React from 'react';
-import {sweeteners} from '../Data/data.js';
-import {Link, useSearchParams} from 'react-router-dom';
+import { sweeteners } from '../Data/data.js';
+import { Link, useSearchParams } from 'react-router-dom';
 import LayoutSection from '../CustomComponents/layoutSection.jsx';
 
 export default function Sweeteners() {
-
-    const [searchParams, setSearchParams] = useSearchParams()
-    console.log(searchParams)
-
-    const typeFilter = searchParams.get('type')
+    const [searchParams, setSearchParams] = useSearchParams();
+    const typeFilter = searchParams.get('type');
 
     const filteredSweetener = typeFilter
-    ? sweeteners.filter(sweetener => sweetener.type.toLowerCase() === typeFilter.toLowerCase())
-    : sweeteners;
+        ? sweeteners.filter(sweetener => sweetener.type.toLowerCase() === typeFilter.toLowerCase())
+        : sweeteners;
 
     const sweetenersArray = filteredSweetener.map(sweetener => (
         <div key={sweetener.id} className="border border-blue-200 shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 rounded-xl m-4 flex flex-col items-center justify-center">
@@ -21,6 +18,23 @@ export default function Sweeteners() {
             </Link>
         </div>
     ));
+
+    // Function to generate Link with isActive styling
+    const FilterLink = ({ children, to, filterValue }) => {
+        const isActive = typeFilter?.toLowerCase() === filterValue.toLowerCase();
+        return (
+            <Link
+                to={to}
+                className={`inline-block px-6 py-3 text-lg font-medium rounded-md transition-colors duration-300 ${
+                    isActive
+                        ? "bg-blue-700 text-white hover:bg-blue-800"
+                        : "text-blue-700 hover:bg-blue-100"
+                }`}
+            >
+                {children}
+            </Link>
+        );
+    };
 
     return (
         <LayoutSection>
@@ -53,6 +67,12 @@ export default function Sweeteners() {
                     <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">Discover Sweeteners</h2>
                     <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300">Exploring the world of sweeteners can be fascinating. This guide aims to debunk common myths and provide factual information on various sweeteners. Whether you're interested in health benefits, dietary choices, or culinary uses, here's where you can start your journey.</p>
                 </div>
+                <div className="flex justify-center gap-4 mb-8">
+                    <FilterLink to="?type=artificial%20sweeteners" filterValue="artificial sweeteners">Artificial Sweeteners</FilterLink>
+                    <FilterLink to="?type=natural%20sweeteners" filterValue="natural sweeteners">Natural Sweeteners</FilterLink>
+                    <FilterLink to="?type=sugar%20alcohol" filterValue="sugar alcohol">Sugar Alcohol</FilterLink>
+                    {typeFilter && <Link to="/" className="inline-block px-6 py-3 text-lg font-medium text-blue-700 rounded-md hover:bg-blue-100">Clear</Link>}
+                </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {sweetenersArray}
                 </div>
@@ -60,3 +80,4 @@ export default function Sweeteners() {
         </LayoutSection>
     );
 }
+
