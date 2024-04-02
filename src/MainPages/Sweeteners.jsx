@@ -62,11 +62,35 @@ export default function Sweeteners() {
                     </div>
                 </div>
             </div>
-            <div className="py-8">
-                <div className="text-center mb-10">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">Discover Sweeteners</h2>
-                    <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300">Exploring the world of sweeteners can be fascinating. This guide aims to debunk common myths and provide factual information on various sweeteners. Whether you're interested in health benefits, dietary choices, or culinary uses, here's where you can start your journey.</p>
+            
+
+            <section className="bg-white dark:bg-gray-900">
+                <div className="flex flex-col md:flex-row items-center justify-center py-8 px-4 mx-auto max-w-screen-xl lg:px-6">
+                    <div className="mt-4 md:mt-0 flex-1">
+                        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Understanding Sweeteners</h2>
+                        <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">In a world quick to judge and slow to research, our app cuts through the noise to deliver facts about sweeteners. It's not about being pro or anti-sweetener; it's about empowering you to make informed decisions. Every food component, at its core, is chemical, and simplifying them as merely 'good' or 'bad' does a disservice to us all. Whether you're sipping on a diet soda or a regular one, you deserve to know the facts, not fear. Here's to making choices based on knowledge, not hearsay.</p>
+                        <a href="#" className="inline-flex items-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900">
+                            Discover the Truth
+                            <svg className="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
+                        </a>
+                    </div>
+                    <div className="flex-1 flex justify-center md:justify-end md:pr-10 lg:pr-16">
+                    <img className="w-4/5 max-w-none dark:hidden" src="/canderel.png" alt="dashboard image" style={{ maxWidth: '80%' }} />
+                    <img className="w-4/5 max-w-none hidden dark:block" src="/canderel.png" alt="dashboard image" style={{ maxWidth: '80%' }} />
+                    </div>
                 </div>
+            </section>
+
+
+
+
+            
+               
+            <section className="text-center mb-10">
+                <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Discover Sweeteners</h2>
+                <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Exploring the world of sweeteners can be fascinating. This guide aims to debunk common myths and provide factual information on various sweeteners. Whether you're interested in health benefits, dietary choices, or culinary uses, here's where you can start your journey.</p>
+            </section>
+
                 <div className="mt-8">
                     <p className="text-center text-2xl font-bold text-gray-900 dark:text-white mb-6">Filter by Sweetener Type</p>
                     <div className="flex flex-col lg:flex-row justify-center items-center gap-4">
@@ -79,7 +103,7 @@ export default function Sweeteners() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {sweetenersArray}
                 </div>
-            </div>
+      
         </LayoutSection>
     );
 }

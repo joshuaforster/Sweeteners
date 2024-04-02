@@ -8,7 +8,7 @@ export default function Header() {
                 <Link to='/'>
                     <img src="/logo.png" alt="Josh's Logo" className="h-10"/>
                 </Link>
-                <nav className="flex space-x-4">
+                {/* <nav className="flex space-x-4">
                     <Link to="/" className="text-lg font-medium text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">
                         Home
                     </Link>
@@ -16,7 +16,7 @@ export default function Header() {
                     <Link to="/blog" className="text-lg font-medium text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">
                         Blog
                     </Link>
-                </nav>
+                </nav> */}
             </div>
         </header>
     );
