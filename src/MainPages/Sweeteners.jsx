@@ -1,10 +1,19 @@
 import React from 'react';
 import {sweeteners} from '../Data/data.js';
-import {Link} from 'react-router-dom';
+import {Link, useSearchParams} from 'react-router-dom';
 import LayoutSection from '../CustomComponents/layoutSection.jsx';
 
 export default function Sweeteners() {
-    const sweetenersArray = sweeteners.map(sweetener => (
+
+    const [searchParams, setSearchParams] = useSearchParams()
+    console.log(searchParams)
+
+    const typeFilter = searchParams.get('type')
+
+    const filteredSweetener = typeFilter?
+     sweeteners.filter(sweetener => sweetener.type.toLowerCase() === typeFilter) : sweeteners
+
+    const sweetenersArray = filteredSweetener.map(sweetener => (
         <div key={sweetener.id} className="border border-blue-200 shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 rounded-xl m-4 flex flex-col items-center justify-center">
             <Link to={`/header/${sweetener.id}`} className="text-xl md:text-2xl text-center text-blue-700 hover:text-blue-900 font-bold">
                 {sweetener.name}

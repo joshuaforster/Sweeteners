@@ -18,9 +18,9 @@ export default function SafetyDosage() {
         </ul>
     ) : <p>No breakdown components available.</p>;
 
-    // Safely render comparisons, if comparisons exist
-    function renderComparisons(){
-        if (!sweetener.comparisons) {
+    function renderComparisons() {
+        // Check if comparisons data exists
+        if (!sweetener || !sweetener.comparisons || !sweetener.comparisons.NaturalComparisons) {
             return <p>No comparison data available.</p>;
         }
 
