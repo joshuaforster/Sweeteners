@@ -10,8 +10,9 @@ export default function Sweeteners() {
 
     const typeFilter = searchParams.get('type')
 
-    const filteredSweetener = typeFilter?
-     sweeteners.filter(sweetener => sweetener.type.toLowerCase() === typeFilter) : sweeteners
+    const filteredSweetener = typeFilter
+    ? sweeteners.filter(sweetener => sweetener.type.toLowerCase() === typeFilter.toLowerCase())
+    : sweeteners;
 
     const sweetenersArray = filteredSweetener.map(sweetener => (
         <div key={sweetener.id} className="border border-blue-200 shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 rounded-xl m-4 flex flex-col items-center justify-center">
