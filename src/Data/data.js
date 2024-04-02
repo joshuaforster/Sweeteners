@@ -107,7 +107,42 @@ export const sweeteners = [
         }
       ],
       explanatoryText: 'The methanol content found in natural foods and beverages due to the breakdown of pectin significantly exceeds the trace amounts one might ingest from sweeteners in diet products. This context is important when considering the safety and health implications of consuming products sweetened with artificial sweeteners like Acesulfame K.'
+    },
+    breakdownComponents: ["Acetoacetic Acid", "Potassium"], // Hypothetical breakdown products for illustrative purposes
+  breakdownAmounts: {
+    perCan: { // Assuming similar use case as aspartame for demonstration
+      AcetoaceticAcid: 50, // mg per can, hypothetical
+      Potassium: 40 // mg per can, hypothetical
+    },
+    per100ml: {
+      AcetoaceticAcid: 14.08, // mg per 100ml, hypothetical
+      Potassium: 11.27 // mg per 100ml, hypothetical
     }
+  },
+  comparisons: {
+    AcetoaceticAcid: { // Hypothetical comparisons
+      Avocado: {
+        contentPer100g: 120, // mg, hypothetical for demonstration
+        averageServingSize: "200g (1 medium avocado)",
+        contentPerServing: 240, // mg in an average avocado, hypothetical
+        comparisonTextPerServing: "Approximately equivalent to 4.8 cans of a beverage with Acesulfame K."
+      }
+    },
+    Potassium: {
+      Banana: {
+        contentPer100g: 358, // mg
+        averageServingSize: "118g (1 medium banana)",
+        contentPerServing: 422, // mg in one medium banana
+        comparisonTextPerServing: "Approximately equivalent to 10.55 cans of a beverage with Acesulfame K."
+      },
+      Potato: {
+        contentPer100g: 421, // mg
+        averageServingSize: "173g (1 medium potato)",
+        contentPerServing: 728, // mg in one medium potato
+        comparisonTextPerServing: "Approximately equivalent to 18.2 cans of a beverage with Acesulfame K."
+      }
+    }
+  }
     },
   {
     id: 2,
@@ -182,6 +217,63 @@ export const sweeteners = [
     },
     comparisonWithNaturalFoods: {
       text: "The components resulting from aspartame digestion are part of regular diets, with methanol levels far below those found in fruits and juices, illustrating the misplaced concerns over its consumption."
+    },
+    breakdownComponents: ["Phenylalanine", "Aspartic Acid", "Methanol"],
+    breakdownAmounts: {
+      perCan: {
+        Phenylalanine: 90, // mg
+        AsparticAcid: 72, // mg
+        Methanol: 18 // mg
+      },
+      per100ml: {
+        Phenylalanine: 25.35, // mg
+        AsparticAcid: 20.28, // mg
+        Methanol: 5.07 // mg
+      }
+    },
+    comparisons: {
+      Methanol: {
+        Tomato: {
+          contentPer100g: 8, // mg
+          averageServingSize: "150g (medium tomato)",
+          contentPerServing: 12, // mg in an average tomato
+          comparisonTextPerServing: "Approximately equivalent to 1.5 medium tomatoes."
+        },
+        OrangeJuice: {
+          contentPer100ml: 16, // mg
+          averageServingSize: "200ml (standard glass)",
+          contentPerServing: 32, // mg in a standard glass
+          comparisonTextPerServing: "Approximately equivalent to 56% of a standard glass of orange juice."
+        }
+      },
+      Phenylalanine: {
+        Egg: {
+          contentPer100g: 500, // mg
+          averageServingSize: "60g (1 large egg)",
+          contentPerServing: 300, // mg in one large egg
+          comparisonTextPerServing: "Approximately 30% of the phenylalanine found in one large egg."
+        },
+        ChickenBreast: {
+          contentPer100g: 2000, // mg
+          averageServingSize: "174g (1 average chicken breast)",
+          contentPerServing: 3480, // mg in one average chicken breast
+          comparisonTextPerServing: "Approximately 2% of the aspartic acid found in an average chicken breast."
+        }
+      },
+      AsparticAcid: {
+        Egg: {
+          contentPer100g: 1100, // mg
+          averageServingSize: "60g (1 large egg)",
+          contentPerServing: 660, // mg in one large egg
+          comparisonTextPerServing: "More than the total aspartic acid in one can of Diet Coke."
+        },
+        ChickenBreast: {
+          contentPer100g: 2000, // mg
+          averageServingSize: "174g (1 average chicken breast)",
+          contentPerServing: 3480, // mg in one average chicken breast
+          comparisonTextPerServing: "The aspartic acid in one can of Diet Coke is only a fraction of that in one average chicken breast."
+        }
+      }
     }
   },
   {
@@ -257,6 +349,38 @@ export const sweeteners = [
     },
     comparisonWithNaturalFoods: {
       text: "As a non-caloric sweetener that does not break down during digestion, Cyclamic Acid offers a sweetness solution without the metabolic effects associated with sugar."
+    },
+    comparisons: {
+      FoodsWithCyclamicAcid: [
+        {
+          name: "Sugar-Free Yogurt",
+          contentPerServing: 20, // mg of Cyclamic Acid per serving
+          averageServingSize: "125g", // Standard serving size
+          comparisonText: "Each serving of Sugar-Free Yogurt contains 20 mg of Cyclamic Acid."
+        },
+        {
+          name: "Diet Soda",
+          contentPerCan: 40, // mg of Cyclamic Acid per can, hypothetical
+          averageServingSize: "355ml (1 can)",
+          comparisonText: "A can of Diet Soda contains 40 mg of Cyclamic Acid, highlighting its use in low-calorie beverages."
+        },
+      ],
+      NaturalComparisons: {
+        Potassium: {
+          Banana: {
+            contentPer100g: 358, // mg of Potassium
+            averageServingSize: "118g (1 medium banana)",
+            contentPerServing: 422, // mg in one medium banana
+            comparisonText: "A medium banana contains 422 mg of Potassium, showcasing how dietary minerals are present in natural foods in significant amounts."
+          },
+          Potato: {
+            contentPer100g: 421, // mg of Potassium
+            averageServingSize: "173g (1 medium potato)",
+            contentPerServing: 728, // mg in one medium potato
+            comparisonText: "One medium potato contains 728 mg of Potassium, comparing natural mineral content to synthetic sweetener usage."
+          }
+        }
+      }
     }
   },
   {
@@ -334,6 +458,32 @@ export const sweeteners = [
     },
     comparisonWithNaturalFoods: {
       text: "Saccharin, unlike sugars naturally present in food, does not provide calories or affect insulin levels, making it a useful tool in managing dietary sugar intake."
+    },
+    comparisons: {
+      FoodsWithSaccharin: [
+        {
+          name: "Sugar-Free Gum",
+          contentPerPiece: 5, // mg of Saccharin per piece
+          averageServingSize: "1 piece",
+          comparisonText: "Each piece of Sugar-Free Gum contains 5 mg of Saccharin."
+        }
+      ],
+      NaturalComparisons: {
+        Potassium: {
+          Banana: {
+            contentPer100g: 358, // mg of Potassium
+            averageServingSize: "118g (1 medium banana)",
+            contentPerServing: 422, // mg in one medium banana
+            comparisonText: "A medium banana contains 422 mg of Potassium, illustrating the presence of essential nutrients in natural foods."
+          },
+          Potato: {
+            contentPer100g: 421, // mg of Potassium
+            averageServingSize: "173g (1 medium potato)",
+            contentPerServing: 728, // mg in one medium potato
+            comparisonText: "One medium potato contains 728 mg of Potassium, highlighting the nutritional value of whole foods compared to synthetic sweeteners."
+          }
+        }
+      }
     }
   },
   {

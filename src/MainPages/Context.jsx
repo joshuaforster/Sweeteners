@@ -1,32 +1,63 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { sweeteners } from '../Data/data.js';
-import { newParams } from '../CustomComponents/useparams.jsx'; // Update the import path as necessary
+import { newParams } from '../CustomComponents/useparams.jsx';
 import LayoutSection from '../CustomComponents/layoutSection.jsx';
 import Sidebar from '../CustomComponents/sidebar.jsx';
 
 export default function SafetyDosage() {
     const { id } = useParams();
     const sweetener = newParams(sweeteners, id);
-  
+
+    // Safely generate a list of components, if breakdownComponents exists
+    const sweetenerComponents = sweetener.breakdownComponents ? (
+        <ul className="list-disc pl-5">
+            {sweetener.breakdownComponents.map((component, index) => (
+                <li key={index} className="mt-1">{component}</li>
+            ))}
+        </ul>
+    ) : <p>No breakdown components available.</p>;
+
+    // Safely render comparisons, if comparisons exist
+    function renderComparisons(){
+        if (!sweetener.comparisons) {
+            return <p>No comparison data available.</p>;
+        }
+
+        return Object.entries(sweetener.comparisons).map(([component, details]) => (
+            <div key={component} className="mt-4">
+                <h2 className="text-xl font-bold text-indigo-700">{component}</h2>
+                {Object.entries(details).map(([item, itemDetails]) => (
+                    <div key={item} className="mt-2 ml-4">
+                        <h3 className="text-lg font-semibold">{item}</h3>
+                        <p className="text-gray-600">{itemDetails.comparisonTextPerServing}</p>
+                        <p className="text-gray-600">Content per 100g/ml: {itemDetails.contentPer100g || itemDetails.contentPer100ml} mg</p>
+                        <p className="text-gray-600">Average Serving Size: {itemDetails.averageServingSize}</p>
+                        <p className="text-gray-600">Content per Serving: {itemDetails.contentPerServing} mg</p>
+                    </div>
+                ))}
+            </div>
+        ));
+    };
+
     return (
         <LayoutSection>
-            <div className="flex min-h-screen">
-                {sweetener ? (
-                    <div>
-                        <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 mb-4">Context</h1>
-                        <p className="text-md md:text-lg text-gray-700">
-                            {sweetener.comparisonWithNaturalFoods.text}
-                        </p>
-                    </div>
-                ) : (
-                    <p className="text-xl text-red-500">
-                        Sweetener not found.
-                    </p>
-                )}
-                <Sidebar/>
-            </div>
-            
+            <div className="flex justify-between min-h-screen p-5">
+                <div className='flex-1'>
+                    {sweetener ? (
+                        <>
+                            <p className="text-2xl font-bold text-indigo-800 mb-4">What is {sweetener.name}?</p>
+                            {sweetenerComponents}
+                            <div className="mt-6">
+                                {renderComparisons()}
+                            </div>
+                        </>
+                    ) : (
+                        <p className="text-xl text-red-500">Sweetener not found.</p>
+                    )}
+                </div>
+                <Sidebar className="w-1/4"/>
+            </div>            
         </LayoutSection>
     );
 }

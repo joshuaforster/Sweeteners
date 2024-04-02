@@ -13,7 +13,7 @@ export default function SweetenerInfo() {
         <LayoutSection>
             <div className="lg:flex min-h-screen">
                 {/* Main content */}
-                <div className="flex-col">
+                <div className="flex-col flex-1">
                     {sweetener ? (
                         <>
                             <div>

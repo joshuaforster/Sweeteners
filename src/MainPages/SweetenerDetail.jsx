@@ -12,7 +12,7 @@ export default function SweetenersDetail() {
     return (
         <LayoutSection>
             <div className="flex min-h-screen">
-                <div className='flex flex-col'>
+                <div className='flex flex-col flex-1'>
                 {sweetener ? (
                     <>
                         <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 mb-4">

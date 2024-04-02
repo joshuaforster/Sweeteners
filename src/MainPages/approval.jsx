@@ -20,7 +20,7 @@ export default function Approval() {
         <LayoutSection>
             <h1>{sweetener.approvalByGoverningBodies.text}</h1>
             <div className="min-h-screen flex space-y-6">
-                <div className='flex flex-col'>
+                <div className='flex flex-1 flex-col'>
                     {approval.length > 0 ? approval : <p className="text-lg text-red-500">No studies found.</p>}
                 </div>
                 <Sidebar />

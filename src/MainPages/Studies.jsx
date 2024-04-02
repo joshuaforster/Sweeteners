@@ -20,7 +20,7 @@ export default function Studies() {
     return (
         <LayoutSection>
             <div className="min-h-screen flex space-y-6">
-                <div className='flex flex-col'>
+                <div className='flex flex-1 flex-col'>
                     {studies.length > 0 ? studies : <p className="text-lg text-red-500">No studies found.</p>}
                 </div>
                 <Sidebar />
