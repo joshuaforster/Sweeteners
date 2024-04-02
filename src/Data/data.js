@@ -386,7 +386,7 @@ export const sweeteners = [
   {
     id: 4,
     name: "Saccharin",
-    type: "Artificial Sweeteners",
+    type: "ArtificialSweeteners",
     overview: {
       generalInfo: "Saccharin is one of the oldest artificial sweeteners, discovered in 1879. It's a zero-calorie sweetener that's about 300 to 400 times sweeter than sucrose (table sugar).",
       history: "Initially used to sweeten foods and beverages without the calories of sugar, saccharin's popularity grew, especially during sugar shortages. Its safety was debated in the 20th century, but subsequent research has supported its safety in normal consumption levels.",
