@@ -13,7 +13,7 @@ export default function Sweeteners() {
 
     const sweetenersArray = filteredSweetener.map(sweetener => (
         <div key={sweetener.id} className="border border-blue-200 shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 rounded-xl m-4 flex flex-col items-center justify-center">
-            <Link to={`/header/${sweetener.id}`} className="text-xl md:text-2xl text-center text-blue-700 hover:text-blue-900 font-bold">
+            <Link to={`/header/${sweetener.id}`} className="text-l md:text-xl text-center text-blue-700 hover:text-blue-900 font-bold">
                 {sweetener.name}
             </Link>
         </div>
