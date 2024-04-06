@@ -18,13 +18,16 @@ export default function Benefits() {
                     {sweetener ? (
                         <>
                             <div>
-                                <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 mb-4">Myths vs Facts</h1>
-                                <h1 className="text-2xl md:text-3xl font-bold text-red-600 mb-4">Myth</h1>
-                                <p className="text-md md:text-lg text-gray-700">{sweetener.mythsVsFacts.myth}</p>
+                                <h1 className="text-3xl md:text-4xl font-bold  dark:text-white text-indigo-600 mb-4">Myths vs Facts</h1>
+                                <p className=' dark:text-white'>Below are the myths and counter arguments about {sweetener.name}</p>
                             </div>
                             <div>
-                                <h1 className="text-2xl md:text-3xl font-bold text-green-600 mb-4">Fact</h1>
-                                <p className="text-md md:text-lg text-gray-700">{sweetener.mythsVsFacts.fact}</p>
+                                <h1 className="text-2xl md:text-3xl font-bold  dark:text-white text-red-600 mb-4">Myth</h1>
+                                <p className="text-md md:text-lg  dark:text-white text-gray-700">{sweetener.mythsVsFacts.myth}</p>
+                            </div>
+                            <div>
+                                <h1 className="text-2xl md:text-3xl font-bold  dark:text-white text-green-600 mb-4">Fact</h1>
+                                <p className="text-md md:text-lg  dark:text-white text-gray-700">{sweetener.mythsVsFacts.fact}</p>
                             </div>
                         </>
                     ) : (

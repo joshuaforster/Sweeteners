@@ -17,10 +17,10 @@ export default function SweetenerInfo() {
                     {sweetener ? (
                         <>
                             <div>
-                                <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 mb-4">
+                                <h1 className="text-3xl md:text-4xl font-bold dark:text-white text-indigo-600 mb-4">
                                     {sweetener.type}
                                 </h1>
-                                <p className="md:text-lg text-gray-700">
+                                <p className="md:text-lg text-gray-700 dark:text-white" >
                                     Explore the various aspects and benefits of this sweetener.
                                 </p>
                             </div>

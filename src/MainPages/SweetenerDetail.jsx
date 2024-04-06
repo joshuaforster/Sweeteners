@@ -15,7 +15,7 @@ export default function SweetenersDetail() {
                 <div className='flex flex-col flex-1'>
                 {sweetener ? (
                     <>
-                        <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 mb-4">
+                        <h1 className="text-3xl md:text-4xl font-bold dark:text-white text-indigo-600 mb-4">
                             {sweetener.name} 
                         </h1>
                         <div className="text-left max-w-4xl">

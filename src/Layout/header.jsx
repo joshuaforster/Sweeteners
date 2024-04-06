@@ -1,23 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {useTheme} from '../CustomComponents/darkTheme.jsx'; // Correct case
+import DarkButton from '../CustomComponents/darkButton'; // Updated path
+import LayoutSection from "../CustomComponents/layoutSection.jsx";
 
 export default function Header() {
-    return (
-        <header className="shadow-lg py-4 bg-white sticky top-0 z-50">
-            <div className='mx-auto px-4 md:px-12 lg:px-24 max-w-screen-xl flex flex-row justify-between items-center  m-auto'>
-                <Link to='/'>
-                    <img src="/logo.png" alt="Josh's Logo" className="h-10"/>
-                </Link>
-                {/* <nav className="flex space-x-4">
-                    <Link to="/" className="text-lg font-medium text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">
-                        Home
-                    </Link>
 
-                    <Link to="/blog" className="text-lg font-medium text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">
-                        Blog
-                    </Link>
-                </nav> */}
-            </div>
-        </header>
+    const { darkMode } = useTheme(); // Accessing darkMode using the useTheme hook
+    
+    return (
+            <section className="shadow-lg sticky top-0 z-50">
+                <LayoutSection>
+                    <header className='flex justify-between items-center'>
+                        <Link to='/'>
+                            {/* Dynamic logo path based on darkMode */}
+                            {darkMode ? <img src="/logowhite.png" alt="Josh's Logo" className="h-10"/> : <img src="/logo.png" alt="Josh's Logo" className="h-10"/>}
+                        </Link>
+                        <div className="flex items-center gap-8">
+                            <DarkButton /> {/* Assuming this button toggles the dark mode */}
+                        </div>
+                    </header>
+                </LayoutSection>
+            </section>
+
     );
 }

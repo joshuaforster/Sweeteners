@@ -32,8 +32,8 @@ export default function SafetyDosage() {
                 <div className="flex-1 flex flex-col space-y-6">
                     {sweetener ? (
                         <>
-                            <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 mb-4">{sweetener.name} - Safe Dosage</h1>
-                            <p className="text-md md:text-lg text-gray-700">
+                            <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 mb-4  dark:text-white">{sweetener.name} -› Safe Dosage</h1>
+                            <p className="text-md md:text-lg  dark:text-white text-gray-700">
                                 Slide your weight (KG) to see how much {sweetener.name} you can consume per day.
                             </p>
                             <SliderSizes
@@ -42,13 +42,14 @@ export default function SafetyDosage() {
                                 max={150}
                                 onChange={handleSliderChange}
                             />
-                            <p className="text-md md:text-lg text-gray-700">You weigh {weight} Kg.</p>
-                            <p className="text-md md:text-lg text-gray-700">
-                                Based on your weight, you can safely consume up to {safeDosageForWeight} mg of {sweetener.name} per day.
+                            <p className="text-md md:text-lg  dark:text-white text-gray-700">You weigh <span className="font-bold">{weight}</span> Kg.</p>
+                            <p className="text-md md:text-lg  dark:text-white text-gray-700">
+                                Based on your weight, you can safely consume up to <span className="font-bold">{safeDosageForWeight} mg</span> of {sweetener.name} per day.
                             </p>
-                            <p className="text-md md:text-lg text-gray-700">
-                                That is the equivalent of {foodItems} {sweetener.safeDosage.productExample.name}s per day.
+                            <p className="text-md md:text-lg  dark:text-white text-gray-700">
+                                That is the equivalent of <span className="font-bold">{foodItems} {sweetener.safeDosage.productExample.name}s</span> per day.
                             </p>
+
                         </>
                     ) : (
                         <p className="text-xl text-red-500">Sweetener not found.</p>

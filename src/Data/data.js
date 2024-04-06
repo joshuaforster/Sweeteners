@@ -350,39 +350,50 @@ export const sweeteners = [
     comparisonWithNaturalFoods: {
       text: "As a non-caloric sweetener that does not break down during digestion, Cyclamic Acid offers a sweetness solution without the metabolic effects associated with sugar."
     },
-    comparisons: {
-      FoodsWithCyclamicAcid: [
-        {
-          name: "Sugar-Free Yogurt",
-          contentPerServing: 20, // mg of Cyclamic Acid per serving
-          averageServingSize: "125g", // Standard serving size
-          comparisonText: "Each serving of Sugar-Free Yogurt contains 20 mg of Cyclamic Acid."
+    breakdownComponents: ["Cyclamate", "Cyclohexylamine"],  // Example breakdown components
+        breakdownAmounts: {
+            perCan: {
+                Cyclamate: 68,  // mg
+                Cyclohexylamine: 32  // mg
+            },
+            per100ml: {
+                Cyclamate: 19.14,  // mg
+                Cyclohexylamine: 9.01  // mg
+            }
         },
-        {
-          name: "Diet Soda",
-          contentPerCan: 40, // mg of Cyclamic Acid per can, hypothetical
-          averageServingSize: "355ml (1 can)",
-          comparisonText: "A can of Diet Soda contains 40 mg of Cyclamic Acid, highlighting its use in low-calorie beverages."
-        },
-      ],
-      NaturalComparisons: {
-        Potassium: {
-          Banana: {
-            contentPer100g: 358, // mg of Potassium
-            averageServingSize: "118g (1 medium banana)",
-            contentPerServing: 422, // mg in one medium banana
-            comparisonText: "A medium banana contains 422 mg of Potassium, showcasing how dietary minerals are present in natural foods in significant amounts."
-          },
-          Potato: {
-            contentPer100g: 421, // mg of Potassium
-            averageServingSize: "173g (1 medium potato)",
-            contentPerServing: 728, // mg in one medium potato
-            comparisonText: "One medium potato contains 728 mg of Potassium, comparing natural mineral content to synthetic sweetener usage."
-          }
+        comparisons: {
+            Cyclamate: {
+                DietSoda: {
+                    contentPer100g: undefined,
+                    contentPer100ml: 11.27, // mg, calculated from 40mg per 355ml can
+                    averageServingSize: "355ml (1 can)",
+                    contentPerServing: 40,
+                    comparisonTextPerServing: "A can of Diet Soda contains approximately 40 mg of Cyclamate, highlighting its widespread use in diet beverages."
+                },
+                SugarFreeYogurt: {
+                    contentPer100g: undefined,
+                    contentPer100ml: undefined,
+                    averageServingSize: "125g",
+                    contentPerServing: 20,
+                    comparisonTextPerServing: "Each serving of Sugar-Free Yogurt contains about 20 mg of Cyclamate."
+                }
+            },
+            Cyclohexylamine: {
+                Peanuts: {
+                    contentPer100g: 250, // Hypothetical value for example
+                    averageServingSize: "50g (a small handful)",
+                    contentPerServing: 125,
+                    comparisonTextPerServing: "A small handful of peanuts contains 125 mg of Cyclohexylamine, a breakdown product of Cyclamate."
+                },
+                Beer: {
+                    contentPer100ml: 4.5, // Hypothetical value for example
+                    averageServingSize: "500ml (standard pint)",
+                    contentPerServing: 22.5,
+                    comparisonTextPerServing: "A standard pint of beer contains about 22.5 mg of Cyclohexylamine, comparing its presence in common beverages."
+                }
+            }
         }
-      }
-    }
-  },
+    },
   {
     id: 4,
     name: "Saccharin",
@@ -459,34 +470,49 @@ export const sweeteners = [
     comparisonWithNaturalFoods: {
       text: "Saccharin, unlike sugars naturally present in food, does not provide calories or affect insulin levels, making it a useful tool in managing dietary sugar intake."
     },
+    breakdownComponents: ["Benzoic Sulfimide"],  // Main chemical component of Saccharin
+    breakdownAmounts: {
+        perCan: {
+            BenzoicSulfimide: 80,  // mg
+        },
+        per100ml: {
+            BenzoicSulfimide: 22.54,  // mg
+        }
+    },
     comparisons: {
-      FoodsWithSaccharin: [
-        {
-          name: "Sugar-Free Gum",
-          contentPerPiece: 5, // mg of Saccharin per piece
-          averageServingSize: "1 piece",
-          comparisonText: "Each piece of Sugar-Free Gum contains 5 mg of Saccharin."
+        BenzoicSulfimide: {
+            DietSoda: {
+                contentPer100g: undefined,
+                contentPer100ml: 12, // mg, assuming 42mg per 355ml can
+                averageServingSize: "355ml (1 can)",
+                contentPerServing: 42,
+                comparisonTextPerServing: "A can of Diet Soda typically contains about 42 mg of Saccharin, demonstrating its role in sugar-free beverage formulations."
+            },
+            SugarFreeGum: {
+                contentPer100g: undefined,
+                contentPer100ml: undefined,
+                averageServingSize: "5g (one stick of gum)",
+                contentPerServing: 5,
+                comparisonTextPerServing: "One stick of sugar-free gum contains approximately 5 mg of Saccharin, used for its strong sweetness without the calories."
+            }
+        },
+        GeneralComparison: {
+            Honey: {
+                contentPer100g: undefined,
+                averageServingSize: "15g (one tablespoon)",
+                contentPerServing: undefined,
+                comparisonTextPerServing: "While honey is naturally sweet and used as a sugar substitute, it does not contain Saccharin but provides a context for sweetness comparison."
+            },
+            Apple: {
+                contentPer100g: undefined,
+                averageServingSize: "182g (one medium apple)",
+                contentPerServing: undefined,
+                comparisonTextPerServing: "An apple, like honey, offers a natural sweetness and serves as a contrast to the artificial sweetness provided by Saccharin in diet products."
+            }
         }
-      ],
-      NaturalComparisons: {
-        Potassium: {
-          Banana: {
-            contentPer100g: 358, // mg of Potassium
-            averageServingSize: "118g (1 medium banana)",
-            contentPerServing: 422, // mg in one medium banana
-            comparisonText: "A medium banana contains 422 mg of Potassium, illustrating the presence of essential nutrients in natural foods."
-          },
-          Potato: {
-            contentPer100g: 421, // mg of Potassium
-            averageServingSize: "173g (1 medium potato)",
-            contentPerServing: 728, // mg in one medium potato
-            comparisonText: "One medium potato contains 728 mg of Potassium, highlighting the nutritional value of whole foods compared to synthetic sweeteners."
-          }
-        }
-      }
     }
-  },
-  {
+},
+{
     id: 5,
     name: "Sucralose",
     type: "Artificial Sweeteners",
@@ -562,8 +588,49 @@ export const sweeteners = [
     },
     comparisonWithNaturalFoods: {
       text: "Sucralose provides a sweetening option without the metabolic and dental health impacts of sugar, aligning with dietary recommendations for reduced sugar consumption."
+    },
+    breakdownComponents: ["Trichlorogalactosucrose"],  // Main chemical component of Sucralose
+breakdownAmounts: {
+    perCan: {
+        Trichlorogalactosucrose: 70,  // mg
+    },
+    per100ml: {
+        Trichlorogalactosucrose: 19.72,  // mg
     }
-  },
+},
+comparisons: {
+    Trichlorogalactosucrose: {
+        DietSoda: {
+            contentPer100g: undefined,
+            contentPer100ml: 10, // mg, assuming 35mg per 355ml can
+            averageServingSize: "355ml (1 can)",
+            contentPerServing: 35,
+            comparisonTextPerServing: "A can of Diet Soda typically contains about 35 mg of Sucralose, illustrating its prevalent use in sugar-free beverage formulations."
+        },
+        SugarFreeGum: {
+            contentPer100g: undefined,
+            contentPer100ml: undefined,
+            averageServingSize: "5g (one stick of gum)",
+            contentPerServing: 4,
+            comparisonTextPerServing: "One stick of sugar-free gum contains approximately 4 mg of Sucralose, used for its intense sweetness without the calories."
+        }
+    },
+    GeneralComparison: {
+        Honey: {
+            contentPer100g: undefined,
+            averageServingSize: "15g (one tablespoon)",
+            contentPerServing: undefined,
+            comparisonTextPerServing: "While honey is naturally sweet and used as a sugar substitute, it does not contain Sucralose but offers a comparison for understanding natural versus artificial sweetness."
+        },
+        Apple: {
+            contentPer100g: undefined,
+            averageServingSize: "182g (one medium apple)",
+            contentPerServing: undefined,
+            comparisonTextPerServing: "An apple provides a natural sweetness and serves as a contrast to the zero-calorie, artificial sweetness of Sucralose in various diet products."
+        }
+    }
+}
+ },
   {
     id: 6,
     name: "Thaumatin",
@@ -630,73 +697,142 @@ export const sweeteners = [
     },
     comparisonWithNaturalFoods: {
     text: "Thaumatin stands out for its natural origin and functionality as a sweetener and flavor enhancer, providing a sweet taste that is difficult to achieve with conventional sugar or other natural sweeteners."
+    },
+    breakdownComponents: ["Thaumatin Protein"],  // Simplified main component of Thaumatin
+breakdownAmounts: {
+    perCan: {
+        ThaumatinProtein: 0.035,  // mg, realistic hypothetical value for a can of sweetened product
+    },
+    per100ml: {
+        ThaumatinProtein: 0.01,  // mg, realistic hypothetical value for beverages
     }
+},
+comparisons: {
+    ThaumatinProtein: {
+        SugarFreeGum: {
+            contentPer100g: undefined,
+            contentPer100ml: undefined,
+            averageServingSize: "5g (one stick of gum)",
+            contentPerServing: 0.0025,
+            comparisonTextPerServing: "One stick of sugar-free gum contains approximately 0.0025 mg of Thaumatin, utilized for its intense sweetness and flavor-enhancing properties."
+        },
+        DairyDessert: {
+            contentPer100g: undefined,
+            contentPer100ml: 0.015, // mg, assuming a hypothetical value for dairy desserts
+            averageServingSize: "150g (one serving of yogurt)",
+            contentPerServing: 0.0225,
+            comparisonTextPerServing: "A serving of flavored dairy yogurt typically contains about 0.0225 mg of Thaumatin, enhancing both sweetness and overall flavor profile."
+        }
+    },
+    NaturalSources: {
+        KatemfeFruit: {
+            contentPer100g: 2, // mg, estimated Thaumatin content in the natural source
+            averageServingSize: "50g (half a fruit)",
+            contentPerServing: 1,
+            comparisonTextPerServing: "Half of a Katemfe fruit, the natural source of Thaumatin, contains approximately 1 mg of Thaumatin, showcasing its natural occurrence and sweetness."
+        }
+    }
+},
     } ,
     {
       id: 7,
       name: "Neohesperidine DC",
       type: "Artificial Sweeteners",
       overview: {
-        generalInfo: "Neohesperidine dihydrochalcone (Neohesperidine DC) is a sweetener derived from the bitter orange. It is known for its intense sweetness, estimated to be up to 1500 times sweeter than sugar, making it highly effective in small quantities.",
-        history: "Developed from the flavonoid neohesperidin found in citrus fruits, Neohesperidine DC was discovered as part of efforts to find new, potent sweeteners with favorable safety profiles. Its use has been particularly valued for its ability to enhance flavor profiles beyond mere sweetness.",
-        notablePoints: "The sweetener is appreciated not only for its sweetness but also for its ability to improve the taste of food products by masking bitter flavors, making it a popular choice for a wide range of applications."
+          generalInfo: "Neohesperidine dihydrochalcone (Neohesperidine DC) is a sweetener derived from the bitter orange. It is known for its intense sweetness, estimated to be up to 1500 times sweeter than sugar, making it highly effective in small quantities.",
+          history: "Developed from the flavonoid neohesperidin found in citrus fruits, Neohesperidine DC was discovered as part of efforts to find new, potent sweeteners with favorable safety profiles. Its use has been particularly valued for its ability to enhance flavor profiles beyond mere sweetness.",
+          notablePoints: "The sweetener is appreciated not only for its sweetness but also for its ability to improve the taste of food products by masking bitter flavors, making it a popular choice for a wide range of applications."
       },
       sweetnessRelativeToSugar: {
-        value: 1500,
-        text: "The high sweetness level of Neohesperidine DC allows for its use in minimal amounts to achieve desired sweetness, contributing to calorie control in dietetic foods and beverages."
+          value: 1500,
+          text: "The high sweetness level of Neohesperidine DC allows for its use in minimal amounts to achieve desired sweetness, contributing to calorie control in dietetic foods and beverages."
       },
       generalSafety: "Recognized as safe by food safety authorities, Neohesperidine DC's consumption within recommended limits has not shown adverse effects, endorsing its use in food and drink products.",
       safeDosage: {
-        amount: 5, // mg per kg of body weight
-        text: "This ADI ensures that Neohesperidine DC can be safely consumed daily without health risks, supporting its inclusion in dietary products.",
-        productExample: {
-            name: 'Sugar-Free Chewing Gum',
-            sweetenerAmountPerUnit: 10, // Assuming 10 mg of Neohesperidine DC per serving of Sugar-Free Chewing Gum
-        }
-    },
+          amount: 5, // mg per kg of body weight
+          text: "This ADI ensures that Neohesperidine DC can be safely consumed daily without health risks, supporting its inclusion in dietary products.",
+          productExample: {
+              name: 'Sugar-Free Chewing Gum',
+              sweetenerAmountPerUnit: 10 // Assuming 10 mg of Neohesperidine DC per serving of Sugar-Free Chewing Gum
+          }
+      },
       practicalSafeDosageExample: {
-        amountPer70kgAdult: 350,
-        equivalentInDietSoda: "Given its potency, the equivalent in diet soda would significantly exceed typical consumption patterns, underscoring its safety margin."
+          amountPer70kgAdult: 350,
+          equivalentInDietSoda: "Given its potency, the equivalent in diet soda would significantly exceed typical consumption patterns, underscoring its safety margin."
       },
       benefitsComparedToSugar: {
-        list: [
-          "Helps reduce calorie intake while maintaining sweetness.",
-          "Does not contribute to tooth decay.",
-          "Can be used by individuals with diabetes, as it does not raise blood sugar levels."
-        ],
-        text: "Neohesperidine DC offers an alternative to sugar that supports health and dietary goals, including weight management and dental health."
+          list: [
+              "Helps reduce calorie intake while maintaining sweetness.",
+              "Does not contribute to tooth decay.",
+              "Can be used by individuals with diabetes, as it does not raise blood sugar levels."
+          ],
+          text: "Neohesperidine DC offers an alternative to sugar that supports health and dietary goals, including weight management and dental health."
       },
       primaryUses: "Its applications range from beverages and desserts to sauces and chewing gum, where it enhances flavor and sweetness without the caloric impact of sugars.",
       approvalByGoverningBodies: {
-        details: [
-          { country: "EU", name: "European Food Safety Authority (EFSA)", link: "https://www.efsa.europa.eu/" },
-          { country: "USA", name: "U.S. Food and Drug Administration (FDA)", link: "https://www.fda.gov/" }
-        ],
-        text: "Approved for use by the EFSA and FDA among others, Neohesperidine DC is recognized for its safety and effectiveness as a sweetener."
+          details: [
+              { country: "EU", name: "European Food Safety Authority (EFSA)", link: "https://www.efsa.europa.eu/" },
+              { country: "USA", name: "U.S. Food and Drug Administration (FDA)", link: "https://www.fda.gov/" }
+          ],
+          text: "Approved for use by the EFSA and FDA among others, Neohesperidine DC is recognized for its safety and effectiveness as a sweetener."
       },
       mythsVsFacts: {
-        myth: "Artificial sweeteners like Neohesperidine DC are unhealthy and cause weight gain.",
-        fact: "Research indicates that when used as part of a balanced diet, Neohesperidine DC and similar sweeteners do not cause weight gain or adverse health effects, offering a sweet taste with fewer calories."
+          myth: "Artificial sweeteners like Neohesperidine DC are unhealthy and cause weight gain.",
+          fact: "Research indicates that when used as part of a balanced diet, Neohesperidine DC and similar sweeteners do not cause weight gain or adverse health effects, offering a sweet taste with fewer calories."
       },
       sugarComparisons: {
-        context: "Neohesperidine DC's role extends beyond just providing sweetness, as it helps in reducing caloric intake and managing dietary health without sacrificing taste.",
-        healthImplications: {
-          text: "Substituting sugar with Neohesperidine DC in foods and beverages can aid in weight management, dental health, and glycemic control, contributing to overall health and well-being."
-        },
-        broaderPerspective: "While the use of Neohesperidine DC is a useful tool in dietary management, maintaining a balanced diet and healthy lifestyle remains paramount for health."
+          context: "Neohesperidine DC's role extends beyond just providing sweetness, as it helps in reducing caloric intake and managing dietary health without sacrificing taste.",
+          healthImplications: {
+              text: "Substituting sugar with Neohesperidine DC in foods and beverages can aid in weight management, dental health, and glycemic control, contributing to overall health and well-being."
+          },
+          broaderPerspective: "While the use of Neohesperidine DC is a useful tool in dietary management, maintaining a balanced diet and healthy lifestyle remains paramount for health."
       },
       studiesAndReferences: [
-        {
-          title: "EFSA Evaluation of Neohesperidine DC",
-          link: "https://www.efsa.europa.eu/en/efsajournal/pub/nd",
-          text: "EFSA's scientific review affirms the safety of Neohesperidine DC, supporting its use within established ADI guidelines."
-        }
+          {
+              title: "EFSA Evaluation of Neohesperidine DC",
+              link: "https://www.efsa.europa.eu/en/efsajournal/pub/nd",
+              text: "EFSA's scientific review affirms the safety of Neohesperidine DC, supporting its use within established ADI guidelines."
+          }
       ],
       breakdownUponDigestion: "Neohesperidine DC undergoes metabolic processes similar to other dietary flavonoids, with its metabolites excreted, indicating no accumulation in the body.",
       amountsInCommonItems: "Used sparingly due to its high sweetness, the exact amount in consumer products varies, tailored to achieve the desired flavor enhancement and sweetness without added calories.",
-      comparisonWithNaturalFoods: "Comparing Neohesperidine DC with natural foods highlights its role in offering a high-intensity sweetening option that aids in reducing sugar and calorie content in the diet."
-    }
-    ,
+      comparisonWithNaturalFoods: "Comparing Neohesperidine DC with natural foods highlights its role in offering a high-intensity sweetening option that aids in reducing sugar and calorie content in the diet.",
+      breakdownComponents: ["Neohesperidine", "Dihydrochalcone"],  // Main chemical components of Neohesperidine DC
+      breakdownAmounts: {
+          perCan: undefined,  // Removing this as it's not typical for drinks
+          per100ml: {
+              Neohesperidine: 0.014,  // mg, used here for general reference, adjust as necessary
+              Dihydrochalcone: 0.014,  // mg, used here for general reference, adjust as necessary
+          }
+      },
+      comparisons: {
+          Neohesperidine: {
+              SugarFreeGum: {
+                  contentPer100g: undefined,
+                  contentPer100ml: undefined,
+                  averageServingSize: "5g (one stick of gum)",
+                  contentPerServing: 0.07, // mg, hypothetical value for illustration
+                  comparisonTextPerServing: "One stick of sugar-free gum typically contains about 0.07 mg of Neohesperidine, highlighting its role in enhancing flavor and sweetness without additional calories."
+              },
+              LowCalorieDesserts: {
+                  contentPer100g: undefined,
+                  contentPer100ml: undefined,
+                  averageServingSize: "100g (one serving)",
+                  contentPerServing: 0.05,
+                  comparisonTextPerServing: "One serving of a low-calorie dessert contains approximately 0.05 mg of Neohesperidine, used for enhancing sweetness and flavor complexity."
+              }
+          },
+          NaturalSources: {
+              CitrusPeels: {
+                  contentPer100g: 1, // mg, natural occurrence of Neohesperidine in citrus peels
+                  averageServingSize: "30g (peel from one orange)",
+                  contentPerServing: 0.3,
+                  comparisonTextPerServing: "The peel from one orange contains about 0.3 mg of Neohesperidine, showcasing its natural source and extraction for sweetener production."
+              }
+          }
+      }
+      
+  },  
     {
       id: 8,
       name: "Neotame",
@@ -736,9 +872,39 @@ export const sweeteners = [
       ],
       breakdownUponDigestion: "Neotame is metabolically stable, meaning it is not broken down or stored in the body, thus not contributing to caloric intake or affecting blood sugar levels.",
       amountsInCommonItems: "Used sparingly due to its potency, Neotame is found in minute quantities in food products, significantly reducing their sugar and calorie content.",
-      comparisonWithNaturalFoods: "As a high-intensity sweetener, Neotame's role in reducing dietary sugar intake showcases its potential benefits in public health, particularly in combating obesity and diabetes."
+      comparisonWithNaturalFoods: "As a high-intensity sweetener, Neotame's role in reducing dietary sugar intake showcases its potential benefits in public health, particularly in combating obesity and diabetes.",
+      breakdownComponents: ["N-[N-(3,3-Dimethylbutyl)-L-α-aspartyl]-L-phenylalanine 1-methyl ester"],  // Main chemical component of Neotame
+breakdownAmounts: {
+    perServingGum: {
+        Neotame: 0.04,  // mg per stick of gum, used here for general reference
+    },
+    perServingDessert: {
+        Neotame: 0.02,  // mg per 100g serving of low-calorie dessert, used here for general reference
     }
-    ,    
+},
+comparisons: {
+    Neotame: {
+        SugarFreeGum: {
+            averageServingSize: "5g (one stick of gum)",
+            contentPerServing: 0.04, // mg, estimated based on general usage
+            comparisonTextPerServing: "One stick of sugar-free gum typically contains about 0.04 mg of Neotame, showcasing its ability to provide intense sweetness in very small amounts."
+        },
+        LowCalorieDesserts: {
+            averageServingSize: "100g (one serving)",
+            contentPerServing: 0.02, // mg, estimated based on general usage
+            comparisonTextPerServing: "One serving of a low-calorie dessert contains approximately 0.02 mg of Neotame, enhancing the flavor without adding calories."
+        }
+    },
+    NaturalSources: {
+        SyntheticOrigin: {
+            contentPer100g: "N/A", // Not applicable as Neotame is fully synthetic
+            averageServingSize: "N/A",
+            contentPerServing: "N/A",
+            comparisonTextPerServing: "Neotame is a synthetic sweetener and does not occur naturally; it is designed for its high sweetening power without caloric contribution."
+        }
+    }
+}
+ },    
     {
       id: 9,
       name: "Salt of Aspartame-Acesulfame",
@@ -775,7 +941,45 @@ export const sweeteners = [
       ],
       breakdownUponDigestion: "Like its component sweeteners, the Salt of Aspartame-Acesulfame is metabolized in the body into its constituent parts, each with a well-established safety profile.",
       amountsInCommonItems: "The compound is used in various food and beverage products, enhancing sweetness with minimal caloric contribution.",
-      comparisonWithNaturalFoods: "In contrast to natural sugars, the Salt of Aspartame-Acesulfame provides a calorie-free sweetness, contributing to dietary flexibility and health maintenance without the drawbacks of sugar."
+      comparisonWithNaturalFoods: "In contrast to natural sugars, the Salt of Aspartame-Acesulfame provides a calorie-free sweetness, contributing to dietary flexibility and health maintenance without the drawbacks of sugar.",
+      breakdownComponents: ["Aspartame", "Acesulfame Potassium"],  // Main chemical components of Salt of Aspartame-Acesulfame
+breakdownAmounts: {
+    perServingGum: {
+        Aspartame: 0.06,  // mg per stick of gum, used here for general reference
+        AcesulfamePotassium: 0.06,  // mg per stick of gum, used here for general reference
+    },
+    perServingDessert: {
+        Aspartame: 0.03,  // mg per 100g serving of low-calorie dessert, used here for general reference
+        AcesulfamePotassium: 0.03,  // mg per 100g serving of low-calorie dessert, used here for general reference
+    }
+},
+comparisons: {
+    Aspartame: {
+        SugarFreeGum: {
+            averageServingSize: "5g (one stick of gum)",
+            contentPerServing: 0.06, // mg, estimated based on general usage
+            comparisonTextPerServing: "One stick of sugar-free gum typically contains about 0.06 mg of Aspartame, part of its blend to enhance sweetness efficiently."
+        },
+        LowCalorieDesserts: {
+            averageServingSize: "100g (one serving)",
+            contentPerServing: 0.03, // mg, estimated based on general usage
+            comparisonTextPerServing: "One serving of a low-calorie dessert contains approximately 0.03 mg of Aspartame, contributing to its sweet taste without added sugars."
+        }
+    },
+    AcesulfamePotassium: {
+        SugarFreeGum: {
+            averageServingSize: "5g (one stick of gum)",
+            contentPerServing: 0.06, // mg, complements Aspartame in the blend for sugar-free gum
+            comparisonTextPerServing: "Each stick of sugar-free gum also contains about 0.06 mg of Acesulfame Potassium, complementing Aspartame for a stable, intense sweetness."
+        },
+        LowCalorieDesserts: {
+            averageServingSize: "100g (one serving)",
+            contentPerServing: 0.03, // mg, works with Aspartame to enhance flavor without increasing caloric content
+            comparisonTextPerServing: "Similarly, each serving of low-calorie desserts incorporates 0.03 mg of Acesulfame Potassium, enhancing flavor and sweetness together with Aspartame."
+        }
+    }
+}
+
     }
     ,
     {
@@ -823,7 +1027,39 @@ export const sweeteners = [
       ],
       breakdownUponDigestion: "Advantame is metabolized in the body similarly to aspartame, though it is significantly more potent and requires smaller quantities for the same sweetening effect, minimizing exposure.",
       amountsInCommonItems: "Due to its high sweetness, Advantame is used in trace amounts in a wide range of products, effectively reducing their overall calorie and sugar content.",
-      comparisonWithNaturalFoods: "Advantame's role in reducing sugar consumption illustrates its potential in supporting public health initiatives aimed at reducing obesity and diabetes prevalence."
+      comparisonWithNaturalFoods: "Advantame's role in reducing sugar consumption illustrates its potential in supporting public health initiatives aimed at reducing obesity and diabetes prevalence.",
+      breakdownComponents: ["Advantame"],  // Main chemical component of Advantame
+breakdownAmounts: {
+    perServingGum: {
+        Advantame: 0.005,  // mg per stick of gum, used here for general reference
+    },
+    perServingDessert: {
+        Advantame: 0.002,  // mg per 100g serving of low-calorie dessert, used here for general reference
+    }
+},
+comparisons: {
+    Advantame: {
+        SugarFreeGum: {
+            averageServingSize: "5g (one stick of gum)",
+            contentPerServing: 0.005, // mg, estimated based on general usage
+            comparisonTextPerServing: "One stick of sugar-free gum typically contains about 0.005 mg of Advantame, showcasing its ability to provide intense sweetness in very small amounts."
+        },
+        LowCalorieDesserts: {
+            averageServingSize: "100g (one serving)",
+            contentPerServing: 0.002, // mg, estimated based on general usage
+            comparisonTextPerServing: "One serving of a low-calorie dessert contains approximately 0.002 mg of Advantame, enhancing the flavor without adding calories."
+        }
+    },
+    NaturalSources: {
+        SyntheticOrigin: {
+            contentPer100g: "N/A", // Not applicable as Advantame is fully synthetic
+            averageServingSize: "N/A",
+            contentPerServing: "N/A",
+            comparisonTextPerServing: "Advantame is a synthetic sweetener derived from aspartame and vanillin, and does not occur naturally; it is designed for its high sweetening power without caloric contribution."
+        }
+    }
+}
+
     },
     {
       id: 11,
@@ -868,7 +1104,41 @@ export const sweeteners = [
       ],
       breakdownUponDigestion: "Steviol glycosides are not metabolized by the body for energy. Instead, they are broken down into steviol, which is then excreted, ensuring they do not contribute to caloric intake or affect blood glucose levels.",
       amountsInCommonItems: "Due to their intense sweetness, steviol glycosides are used in minute quantities in food products, effectively providing sweetness without added calories.",
-      comparisonWithNaturalFoods: "Unlike sugar, which provides calories and affects glycemic response, steviol glycosides offer a calorie-free sweetness, aligning with dietary recommendations for reduced sugar consumption."
+      comparisonWithNaturalFoods: "Unlike sugar, which provides calories and affects glycemic response, steviol glycosides offer a calorie-free sweetness, aligning with dietary recommendations for reduced sugar consumption.",
+      breakdownComponents: ["Stevioside", "Rebaudioside A"],  // Main chemical components of Steviol Glycosides
+breakdownAmounts: {
+    perServingTea: {
+        Stevioside: 0.010,  // mg per cup of tea, used here for general reference
+        RebaudiosideA: 0.010,  // mg per cup of tea, used here for general reference
+    },
+    perServingYogurt: {
+        Stevioside: 0.015,  // mg per 100g serving of yogurt, used here for general reference
+        RebaudiosideA: 0.015,  // mg per 100g serving of yogurt, used here for general reference
+    }
+},
+comparisons: {
+    SteviolGlycosides: {
+        HerbalTea: {
+            averageServingSize: "240ml (one cup)",
+            contentPerServing: 0.020, // mg, sum of Stevioside and Rebaudioside A, estimated based on general usage
+            comparisonTextPerServing: "One cup of herbal tea sweetened with Steviol Glycosides typically contains about 0.020 mg of these compounds, providing a natural sweetness without added calories."
+        },
+        FlavoredYogurt: {
+            averageServingSize: "100g (one serving)",
+            contentPerServing: 0.030, // mg, sum of Stevioside and Rebaudioside A, estimated based on general usage
+            comparisonTextPerServing: "One serving of flavored yogurt typically contains about 0.030 mg of Steviol Glycosides, enhancing the sweetness naturally without impacting caloric content."
+        }
+    },
+    NaturalSources: {
+        SteviaLeaves: {
+            contentPer100g: 10, // mg, natural occurrence of Steviol Glycosides in Stevia leaves
+            averageServingSize: "10g (a handful of leaves)",
+            contentPerServing: 1,
+            comparisonTextPerServing: "A handful of Stevia leaves naturally contains about 1 mg of Steviol Glycosides, showcasing the plant’s natural capacity to produce these sweet compounds."
+        }
+    }
+}
+
     },
     {
       id: 12,
@@ -909,7 +1179,41 @@ export const sweeteners = [
       ],
       breakdownUponDigestion: "Like other steviol glycosides, those produced enzymatically are not metabolized for energy but are broken down into steviol and then excreted, ensuring no caloric intake.",
       amountsInCommonItems: "Utilized in minimal amounts due to their high sweetness, these sweeteners enable the production of low-calorie, sugar-free options in various food and beverage categories.",
-      comparisonWithNaturalFoods: "As a sugar alternative, enzymatically produced steviol glycosides offer a way to enjoy sweet tastes without the caloric impact, making them a preferable option for health-conscious consumers."
+      comparisonWithNaturalFoods: "As a sugar alternative, enzymatically produced steviol glycosides offer a way to enjoy sweet tastes without the caloric impact, making them a preferable option for health-conscious consumers.",
+      breakdownComponents: ["Rebaudioside M", "Rebaudioside D"],  // Main chemical components of Enzymatically Produced Steviol Glycosides
+breakdownAmounts: {
+    perServingTea: {
+        RebaudiosideM: 0.012,  // mg per cup of tea, used here for general reference
+        RebaudiosideD: 0.012,  // mg per cup of tea, used here for general reference
+    },
+    perServingYogurt: {
+        RebaudiosideM: 0.018,  // mg per 100g serving of yogurt, used here for general reference
+        RebaudiosideD: 0.018,  // mg per 100g serving of yogurt, used here for general reference
+    }
+},
+comparisons: {
+    EnzymaticallyProducedSteviolGlycosides: {
+        HerbalTea: {
+            averageServingSize: "240ml (one cup)",
+            contentPerServing: 0.024, // mg, sum of Rebaudioside M and D, estimated based on general usage
+            comparisonTextPerServing: "One cup of herbal tea sweetened with enzymatically produced steviol glycosides typically contains about 0.024 mg of these compounds, offering a refined sweetness with fewer bitter undertones."
+        },
+        FlavoredYogurt: {
+            averageServingSize: "100g (one serving)",
+            contentPerServing: 0.036, // mg, sum of Rebaudioside M and D, estimated based on general usage
+            comparisonTextPerServing: "One serving of flavored yogurt typically contains about 0.036 mg of enzymatically produced steviol glycosides, enhancing the sweetness with a clean, pure taste profile."
+        }
+    },
+    NaturalSources: {
+        SteviaLeaves: {
+            contentPer100g: 10, // mg, natural occurrence of traditional Steviol Glycosides in Stevia leaves
+            averageServingSize: "10g (a handful of leaves)",
+            contentPerServing: 1,
+            comparisonTextPerServing: "A handful of Stevia leaves naturally contains about 1 mg of traditional Steviol Glycosides, demonstrating the base level from which these enzymatically enhanced versions are derived."
+        }
+    }
+}
+
     },
     {
       id: 13,
@@ -951,9 +1255,44 @@ export const sweeteners = [
       ],
       breakdownUponDigestion: "As a sugar alcohol, polyglycitol syrup is partially absorbed and metabolized by the body, contributing fewer calories than sugar and having less of an effect on blood glucose levels.",
       amountsInCommonItems: "Used as a bulk sweetener, polyglycitol syrup's presence in food products contributes to sweetness and texture without significantly increasing caloric content.",
-      comparisonWithNaturalFoods: "Unlike natural sugars, which can affect blood sugar and caloric intake, polyglycitol syrup offers a sweetening option that mitigates these concerns, making it a preferable choice for health-conscious consumers and those with dietary restrictions."
+      comparisonWithNaturalFoods: "Unlike natural sugars, which can affect blood sugar and caloric intake, polyglycitol syrup offers a sweetening option that mitigates these concerns, making it a preferable choice for health-conscious consumers and those with dietary restrictions.",
+      breakdownComponents: ["Sorbitol", "Maltitol", "Hydrogenated Glucose Syrups"],  // Main chemical components of Polyglycitol Syrup
+breakdownAmounts: {
+    perServingGum: {
+        Sorbitol: 0.30,  // mg per stick of gum, used here for general reference
+        Maltitol: 0.20,  // mg per stick of gum, used here for general reference
+        HydrogenatedGlucoseSyrups: 0.10,  // mg per stick of gum, used here for general reference
     },
-    {
+    perServingCandy: {
+        Sorbitol: 0.40,  // mg per piece of candy, used here for general reference
+        Maltitol: 0.30,  // mg per piece of candy, used here for general reference
+        HydrogenatedGlucoseSyrups: 0.15,  // mg per piece of candy, used here for general reference
+    }
+},
+comparisons: {
+    PolyglycitolSyrup: {
+        SugarFreeGum: {
+            averageServingSize: "5g (one stick of gum)",
+            contentPerServing: 0.60, // mg, sum of all components, estimated based on general usage
+            comparisonTextPerServing: "One stick of sugar-free gum typically contains about 0.60 mg of Polyglycitol Syrup, utilized for its ability to provide bulk and sweetness without significant caloric addition."
+        },
+        SugarFreeCandy: {
+            averageServingSize: "10g (one piece of candy)",
+            contentPerServing: 0.85, // mg, sum of all components, estimated based on general usage
+            comparisonTextPerServing: "One piece of sugar-free candy typically contains about 0.85 mg of Polyglycitol Syrup, helping to provide a satisfying texture and sweetness while being tooth-friendly."
+        }
+    },
+    NaturalSources: {
+        SyntheticOrigin: {
+            contentPer100g: "N/A", // Not applicable as Polyglycitol Syrup is fully synthetic
+            averageServingSize: "N/A",
+            contentPerServing: "N/A",
+            comparisonTextPerServing: "Polyglycitol Syrup is a synthetic product and does not occur naturally; it is engineered to mimic the textural properties of sugar while offering a reduced caloric footprint."
+        }
+    }
+}
+},
+{
       id: 14,
       name: "Sorbitol",
       type: "Sugar Alcohol",
@@ -993,9 +1332,42 @@ export const sweeteners = [
       ],
       breakdownUponDigestion: "Sorbitol is partially absorbed by the body and metabolized slowly, contributing to its lower caloric value compared to sugar.",
       amountsInCommonItems: "Sorbitol is commonly found in sugar-free products, providing sweetness with fewer calories and less impact on blood sugar levels.",
-      comparisonWithNaturalFoods: "Unlike sugars that can spike blood glucose levels, sorbitol offers a lower-calorie, lower-glycemic alternative, making it a preferable choice for those managing caloric intake or blood sugar."
+      comparisonWithNaturalFoods: "Unlike sugars that can spike blood glucose levels, sorbitol offers a lower-calorie, lower-glycemic alternative, making it a preferable choice for those managing caloric intake or blood sugar.",
+      breakdownComponents: ["Sorbitol"],  // Main chemical component of Sorbitol
+breakdownAmounts: {
+    perServingGum: {
+        Sorbitol: 0.50,  // mg per stick of gum, used here for general reference
     },
-    {
+    perServingDessert: {
+        Sorbitol: 0.75,  // mg per 100g serving of frozen dessert, used here for general reference
+    }
+},
+comparisons: {
+    Sorbitol: {
+        SugarFreeGum: {
+            averageServingSize: "5g (one stick of gum)",
+            contentPerServing: 0.50, // mg, estimated based on general usage
+            comparisonTextPerServing: "One stick of sugar-free gum typically contains about 0.50 mg of Sorbitol, utilized for its sweetening effect as well as its benefits in oral health by not promoting tooth decay."
+        },
+        FrozenDessert: {
+            averageServingSize: "100g (one serving)",
+            contentPerServing: 0.75, // mg, estimated based on general usage
+            comparisonTextPerServing: "One serving of frozen dessert typically contains about 0.75 mg of Sorbitol, helping to provide sweetness and texture without significantly increasing the caloric content."
+        }
+    },
+    NaturalSources: {
+        CornSyrup: {
+            contentPer100g: 5, // mg, natural occurrence of Sorbitol in corn syrup
+            averageServingSize: "100g",
+            contentPerServing: 5,
+            comparisonTextPerServing: "100 grams of corn syrup may naturally contain about 5 mg of Sorbitol, indicating its presence as a naturally occurring sugar alcohol in various plants."
+        }
+    }
+}
+
+
+},
+{
       id: 15,
       name: "Sorbitol Syrup",
       type: "Sugar Alcohol",
@@ -1035,9 +1407,41 @@ export const sweeteners = [
       ],
       breakdownUponDigestion: "Sorbitol syrup is metabolized at a slower rate than sugar, providing a lower glycemic index and fewer calories, thereby having a lesser impact on blood glucose levels.",
       amountsInCommonItems: "Often used in sugar-free and low-calorie products, sorbitol syrup's application varies, contributing sweetness and texture without the full calorie content of sugar.",
-      comparisonWithNaturalFoods: "Compared to natural sugars, sorbitol syrup offers a lower-calorie, lower-glycemic sweetening option, aligning with health-conscious consumption and dietary management."
+      comparisonWithNaturalFoods: "Compared to natural sugars, sorbitol syrup offers a lower-calorie, lower-glycemic sweetening option, aligning with health-conscious consumption and dietary management.",
+      breakdownComponents: ["Sorbitol"],  // Main chemical component of Sorbitol Syrup
+breakdownAmounts: {
+    perServingBakedGoods: {
+        Sorbitol: 1.50,  // g per 100g serving of baked goods, used here for general reference
     },
-    {
+    perServingBeverages: {
+        Sorbitol: 2.00,  // g per 100ml serving of beverage, used here for general reference
+    }
+},
+comparisons: {
+    Sorbitol: {
+        BakedGoods: {
+            averageServingSize: "100g (one serving)",
+            contentPerServing: 1.50, // g, estimated based on general usage
+            comparisonTextPerServing: "100 grams of baked goods typically contain about 1.50 grams of Sorbitol Syrup, utilized for its moisture-retaining and sweetening properties without significantly increasing the caloric content."
+        },
+        Beverages: {
+            averageServingSize: "100ml (one serving)",
+            contentPerServing: 2.00, // g, estimated based on general usage
+            comparisonTextPerServing: "100 milliliters of certain beverages may contain about 2.00 grams of Sorbitol Syrup, providing sweetness and enhancing mouthfeel while being suitable for sugar-restricted diets."
+        }
+    },
+    NaturalSources: {
+        Fruits: {
+            contentPer100g: "Variable", // Dependent on the fruit type, e.g., apples, pears
+            averageServingSize: "100g (one medium fruit)",
+            contentPerServing: "Variable",
+            comparisonTextPerServing: "Natural fruits like apples and pears contain variable amounts of Sorbitol, showcasing its presence as a naturally occurring sugar alcohol in these fruits."
+        }
+    }
+}
+
+},
+{
       id: 16,
       name: "Mannitol",
       type: "Sugar Alcohol",
@@ -1077,9 +1481,41 @@ export const sweeteners = [
       ],
       breakdownUponDigestion: "Mannitol is poorly absorbed by the body, which contributes to its low glycemic index and caloric content, making it a suitable sweetener for those managing calorie and sugar intake.",
       amountsInCommonItems: "Utilized for its non-cariogenic and low-calorie properties, mannitol is found in a variety of sugar-free and low-calorie foods and beverages.",
-      comparisonWithNaturalFoods: "As a sugar substitute, mannitol offers advantages like lower caloric content and reduced impact on blood sugar levels, aligning with dietary goals focused on health and wellness."
+      comparisonWithNaturalFoods: "As a sugar substitute, mannitol offers advantages like lower caloric content and reduced impact on blood sugar levels, aligning with dietary goals focused on health and wellness.",
+      breakdownComponents: ["Mannitol"],  // Main chemical component of Mannitol
+breakdownAmounts: {
+    perServingGum: {
+        Mannitol: 0.50,  // g per stick of gum, used here for general reference
     },
-    {
+    perServingCandy: {
+        Mannitol: 0.75,  // g per piece of candy, used here for general reference
+    }
+},
+comparisons: {
+    Mannitol: {
+        SugarFreeGum: {
+            averageServingSize: "5g (one stick of gum)",
+            contentPerServing: 0.50, // g, estimated based on general usage
+            comparisonTextPerServing: "One stick of sugar-free gum typically contains about 0.50 grams of Mannitol, utilized for its ability to provide sweetness and improve texture without contributing to tooth decay."
+        },
+        SugarFreeCandy: {
+            averageServingSize: "10g (one piece of candy)",
+            contentPerServing: 0.75, // g, estimated based on general usage
+            comparisonTextPerServing: "One piece of sugar-free candy typically contains about 0.75 grams of Mannitol, chosen for its non-hygroscopic nature which helps prevent stickiness and melting."
+        }
+    },
+    NaturalSources: {
+        Mushrooms: {
+            contentPer100g: 0.5, // g, natural occurrence of Mannitol in mushrooms
+            averageServingSize: "100g (about one cup chopped)",
+            contentPerServing: 0.5,
+            comparisonTextPerServing: "About one cup of chopped mushrooms naturally contains 0.5 grams of Mannitol, highlighting its presence in fungi and some other plants."
+        }
+    }
+}
+
+},
+{
       id: 17,
       name: "Isomalt",
       type: "Sugar Alcohol",
@@ -1119,9 +1555,41 @@ export const sweeteners = [
       ],
       breakdownUponDigestion: "Isomalt is partially absorbed in the small intestine and largely fermented in the colon, which explains its lower caloric value and reduced effect on blood glucose levels.",
       amountsInCommonItems: "Found primarily in sugar-free confections, Isomalt contributes to the sweetness and texture of products without the full caloric impact of conventional sugars.",
-      comparisonWithNaturalFoods: "Utilizing Isomalt as a sweetening agent offers a lower-calorie, lower-glycemic alternative to natural sugars, beneficial for maintaining healthful dietary practices."
+      comparisonWithNaturalFoods: "Utilizing Isomalt as a sweetening agent offers a lower-calorie, lower-glycemic alternative to natural sugars, beneficial for maintaining healthful dietary practices.",
+      breakdownComponents: ["Isomalt"],  // Main chemical component of Isomalt
+breakdownAmounts: {
+    perServingCandy: {
+        Isomalt: 2.00,  // g per piece of candy, used here for general reference
     },
-    {
+    perServingBakedGoods: {
+        Isomalt: 1.50,  // g per 100g serving of baked goods, used here for general reference
+    }
+},
+comparisons: {
+    Isomalt: {
+        SugarFreeCandy: {
+            averageServingSize: "10g (one piece of candy)",
+            contentPerServing: 2.00, // g, estimated based on general usage
+            comparisonTextPerServing: "One piece of sugar-free candy typically contains about 2.00 grams of Isomalt, favored for its ability to provide a sweet taste and structural integrity without spiking blood sugar levels."
+        },
+        BakedGoods: {
+            averageServingSize: "100g (one serving)",
+            contentPerServing: 1.50, // g, estimated based on general usage
+            comparisonTextPerServing: "100 grams of baked goods typically include about 1.50 grams of Isomalt, utilizing its non-hygroscopic nature to maintain moisture without becoming sticky."
+        }
+    },
+    NaturalSources: {
+        BeetSugar: {
+            contentPer100g: "N/A", // Isomalt is derived from beet sugar through enzymatic transformation
+            averageServingSize: "N/A",
+            contentPerServing: "N/A",
+            comparisonTextPerServing: "Isomalt is derived from beet sugar; however, the enzymatic process alters its properties, making it a unique substance that does not occur naturally in its final form."
+        }
+    }
+}
+
+},
+{
       id: 18,
       name: "Maltitol",
       type: "Sugar Alcohol",
@@ -1161,9 +1629,40 @@ export const sweeteners = [
       ],
       breakdownUponDigestion: "Maltitol is partially absorbed by the body, with the remainder being fermented in the colon. This partial absorption is responsible for its reduced caloric contribution compared to sugar.",
       amountsInCommonItems: "Maltitol is found in various sugar-free and reduced-calorie products, providing sweetness and bulk similar to that of sugar but with fewer calories and less impact on blood sugar.",
-      comparisonWithNaturalFoods: "As a sugar alcohol, Maltitol offers a compromise between the sweetness of natural sugars and the need to reduce caloric intake and manage blood glucose levels."
+      comparisonWithNaturalFoods: "As a sugar alcohol, Maltitol offers a compromise between the sweetness of natural sugars and the need to reduce caloric intake and manage blood glucose levels.",
+      breakdownComponents: ["Maltitol"],  // Main chemical component of Maltitol
+breakdownAmounts: {
+    perServingCandy: {
+        Maltitol: 5.00,  // g per piece of candy, used here for general reference
     },
-    {
+    perServingBakedGoods: {
+        Maltitol: 3.00,  // g per 100g serving of baked goods, used here for general reference
+    }
+},
+comparisons: {
+    Maltitol: {
+        SugarFreeCandy: {
+            averageServingSize: "10g (one piece of candy)",
+            contentPerServing: 5.00, // g, estimated based on general usage
+            comparisonTextPerServing: "One piece of sugar-free candy typically contains about 5.00 grams of Maltitol, chosen for its sugar-like sweetness and ability to reduce caloric intake without sacrificing taste."
+        },
+        BakedGoods: {
+            averageServingSize: "100g (one serving)",
+            contentPerServing: 3.00, // g, estimated based on general usage
+            comparisonTextPerServing: "100 grams of baked goods often include about 3.00 grams of Maltitol, benefiting from its moisture-retaining properties and sweet flavor, making it ideal for sugar-free recipes."
+        }
+    },
+    NaturalSources: {
+        Corn: {
+            contentPer100g: "N/A", // Maltitol is processed from corn but does not naturally occur in measurable amounts
+            averageServingSize: "100g",
+            contentPerServing: "N/A",
+            comparisonTextPerServing: "While derived from corn starch through hydrogenation, Maltitol itself is not found naturally in corn in its sweetener form; its production involves enzymatic transformation."
+        }
+    }
+}
+},
+{
       id: 19,
       name: "Maltitol Syrup",
       type: "Sugar Alcohol",
@@ -1202,9 +1701,41 @@ export const sweeteners = [
       ],
       breakdownUponDigestion: "Maltitol syrup is partially absorbed in the intestine, with the remainder being fermented by bacteria in the colon, contributing fewer calories than sugar.",
       amountsInCommonItems: "Predominantly found in 'sugar-free' or 'no sugar added' products, maltitol syrup provides a sweetness that closely mimics that of conventional syrups.",
-      comparisonWithNaturalFoods: "Unlike natural sweet syrups that can significantly increase caloric and sugar intake, maltitol syrup offers a lower-calorie, lower-glycemic alternative."
+      comparisonWithNaturalFoods: "Unlike natural sweet syrups that can significantly increase caloric and sugar intake, maltitol syrup offers a lower-calorie, lower-glycemic alternative.",
+      breakdownComponents: ["Maltitol Syrup"],  // Main chemical component of Maltitol Syrup
+breakdownAmounts: {
+    perServingCandy: {
+        MaltitolSyrup: 8.00,  // g per piece of candy, used here for general reference
     },
-    {
+    perServingBakedGoods: {
+        MaltitolSyrup: 10.00,  // g per 100g serving of baked goods, used here for general reference
+    }
+},
+comparisons: {
+    MaltitolSyrup: {
+        SugarFreeCandy: {
+            averageServingSize: "10g (one piece of candy)",
+            contentPerServing: 8.00, // g, estimated based on general usage
+            comparisonTextPerServing: "One piece of sugar-free candy typically contains about 8.00 grams of Maltitol Syrup, favored for its ability to provide a sweet taste and maintain moisture without increasing blood sugar levels significantly."
+        },
+        BakedGoods: {
+            averageServingSize: "100g (one serving)",
+            contentPerServing: 10.00, // g, estimated based on general usage
+            comparisonTextPerServing: "100 grams of baked goods often include about 10.00 grams of Maltitol Syrup, benefiting from its sweet flavor and moisture-retaining properties, making it ideal for sugar-free and low-calorie recipes."
+        }
+    },
+    NaturalSources: {
+        Corn: {
+            contentPer100g: "N/A", // Maltitol Syrup is derived from corn but does not naturally occur
+            averageServingSize: "100g",
+            contentPerServing: "N/A",
+            comparisonTextPerServing: "While Maltitol Syrup is processed from corn starch, it does not occur naturally in corn in its sweetener form; its production involves extensive processing and hydrogenation."
+        }
+    }
+}
+
+},
+{
       id: 20,
       name: "Lactitol",
       type: "Sugar Alcohol",
@@ -1244,9 +1775,40 @@ export const sweeteners = [
       ],
       breakdownUponDigestion: "Lactitol is poorly absorbed in the intestine, resulting in a lower caloric value than sugar and minimal impact on blood glucose levels.",
       amountsInCommonItems: "Lactitol is often used in 'no sugar added' or 'sugar-free' products, providing a sweet taste without the full calorie content of traditional sugars.",
-      comparisonWithNaturalFoods: "Unlike sucrose and other natural sugars, lactitol offers a low-calorie, low-glycemic alternative for sweetening, making it a beneficial choice for health-conscious consumers."
+      comparisonWithNaturalFoods: "Unlike sucrose and other natural sugars, lactitol offers a low-calorie, low-glycemic alternative for sweetening, making it a beneficial choice for health-conscious consumers.",
+      breakdownComponents: ["Lactitol"],  // Main chemical component of Lactitol
+breakdownAmounts: {
+    perServingBakedGoods: {
+        Lactitol: 2.00,  // g per 100g serving of baked goods, used here for general reference
     },
-    {
+    perServingIceCream: {
+        Lactitol: 1.50,  // g per 100g serving of ice cream, used here for general reference
+    }
+},
+comparisons: {
+    Lactitol: {
+        BakedGoods: {
+            averageServingSize: "100g (one serving)",
+            contentPerServing: 2.00, // g, estimated based on general usage
+            comparisonTextPerServing: "100 grams of baked goods typically include about 2.00 grams of Lactitol, providing sweetness and bulk similar to sugar but with fewer calories and a lower impact on blood glucose levels."
+        },
+        IceCream: {
+            averageServingSize: "100g (about a scoop)",
+            contentPerServing: 1.50, // g, estimated based on general usage
+            comparisonTextPerServing: "A scoop of ice cream generally contains about 1.50 grams of Lactitol, making it a preferred sweetener for reducing sugar content while also serving as a texturizing agent."
+        }
+    },
+    NaturalSources: {
+        Lactose: {
+            contentPer100g: "N/A", // Lactitol is derived from lactose but does not naturally occur
+            averageServingSize: "100g",
+            contentPerServing: "N/A",
+            comparisonTextPerServing: "Lactitol is chemically derived from lactose found in dairy products; it is modified to offer the benefits of a low-calorie sweetener with prebiotic properties."
+        }
+    }
+}
+},
+{
       id: 21,
       name: "Xylitol",
       type: "Sugar Alcohol",
@@ -1286,9 +1848,40 @@ export const sweeteners = [
       ],
       breakdownUponDigestion: "Unlike sugar, xylitol is not fully absorbed by the body, resulting in a lower caloric contribution and minimal impact on blood sugar levels.",
       amountsInCommonItems: "Xylitol is commonly found in sugar-free chewing gums and mints, where it provides a sweet taste and dental health benefits.",
-      comparisonWithNaturalFoods: "Compared to foods naturally high in sugars, xylitol offers a healthful alternative that supports dental health and can fit into a low-calorie, low-sugar diet."
+      comparisonWithNaturalFoods: "Compared to foods naturally high in sugars, xylitol offers a healthful alternative that supports dental health and can fit into a low-calorie, low-sugar diet.",
+      breakdownComponents: ["Xylitol"],  // Main chemical component of Xylitol
+breakdownAmounts: {
+    perServingGum: {
+        Xylitol: 1.00,  // g per stick of gum, used here for general reference
     },
-    {
+    perServingOralCare: {
+        Xylitol: 0.50,  // g per use in oral care products, used here for general reference
+    }
+},
+comparisons: {
+    Xylitol: {
+        SugarFreeGum: {
+            averageServingSize: "5g (one stick of gum)",
+            contentPerServing: 1.00, // g, estimated based on general usage
+            comparisonTextPerServing: "One stick of sugar-free gum typically contains about 1.00 gram of Xylitol, valued for its effectiveness in reducing tooth decay and promoting oral health."
+        },
+        OralCareProducts: {
+            averageServingSize: "N/A (use-based measurement)",
+            contentPerServing: 0.50, // g, estimated for typical use in toothpaste or mouthwash
+            comparisonTextPerServing: "Oral care products like toothpaste and mouthwash commonly contain approximately 0.50 grams of Xylitol per use, leveraging its benefits for dental health and cavity prevention."
+        }
+    },
+    NaturalSources: {
+        Berries: {
+            contentPer100g: 0.03, // g, natural occurrence of Xylitol in berries
+            averageServingSize: "100g (about a cup of berries)",
+            contentPerServing: 0.03,
+            comparisonTextPerServing: "About a cup of berries naturally contains about 0.03 grams of Xylitol, showcasing its natural presence in low quantities in fruits and vegetables."
+        }
+    }
+}
+},
+{
       id: 22,
       name: "Erythritol",
       type: "Sugar Alcohol",
@@ -1324,8 +1917,39 @@ export const sweeteners = [
       ],
       breakdownUponDigestion: "Most erythritol consumed is absorbed into the bloodstream and excreted unchanged in urine, with minimal fermentation by gut bacteria.",
       amountsInCommonItems: "Erythritol is commonly found in low-calorie and sugar-free products, often combined with other sweeteners to enhance its sweetness.",
-      comparisonWithNaturalFoods: "While natural sugars from fruits contribute to overall calorie intake, erythritol offers a negligible calorie alternative, making it a suitable sweetener for a broad range of dietary needs."
+      comparisonWithNaturalFoods: "While natural sugars from fruits contribute to overall calorie intake, erythritol offers a negligible calorie alternative, making it a suitable sweetener for a broad range of dietary needs.",
+      breakdownComponents: ["Erythritol"],  // Main chemical component of Erythritol
+breakdownAmounts: {
+    perServingBakedGoods: {
+        Erythritol: 2.00,  // g per 100g serving of baked goods, used here for general reference
+    },
+    perServingBeverages: {
+        Erythritol: 1.50,  // g per 250ml serving of beverage, used here for general reference
     }
+},
+comparisons: {
+    Erythritol: {
+        SugarFreeBakedGoods: {
+            averageServingSize: "100g (one serving)",
+            contentPerServing: 2.00, // g, estimated based on general usage
+            comparisonTextPerServing: "100 grams of sugar-free baked goods typically contain about 2.00 grams of Erythritol, providing sweetness without contributing to calories or sugar intake."
+        },
+        LowCalorieBeverages: {
+            averageServingSize: "250ml (one cup)",
+            contentPerServing: 1.50, // g, estimated based on general usage
+            comparisonTextPerServing: "A cup of low-calorie beverage generally contains about 1.50 grams of Erythritol, making it a favorite choice for reducing calorie and sugar content without affecting blood sugar levels."
+        }
+    },
+    NaturalSources: {
+        Pears: {
+            contentPer100g: 0.04, // g, natural occurrence of Erythritol in pears
+            averageServingSize: "100g (one medium pear)",
+            contentPerServing: 0.04,
+            comparisonTextPerServing: "A medium pear naturally contains about 0.04 grams of Erythritol, illustrating its presence in small quantities in fruits."
+        }
+    }
+}
+}
     
 ]
 

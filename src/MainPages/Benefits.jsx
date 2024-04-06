@@ -16,15 +16,15 @@ export default function SweetenerInfo() {
                 <div className="flex-1 flex flex-col">
                     {sweetener ? (
                         <>
-                            <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 mb-4">Benefits</h1>
-                            <p className="text-md md:text-lg text-gray-700">
+                            <h1 className="text-3xl md:text-4xl  dark:text-white font-bold text-indigo-600 mb-4">Benefits</h1>
+                            <p className="text-md md:text-lg  dark:text-white text-gray-700">
                                 {sweetener.benefitsComparedToSugar.text}
                             </p>
                             
                             {sweetener.benefitsComparedToSugar.list && sweetener.benefitsComparedToSugar.list.length > 0 && (
                                 <ul>
                                     {sweetener.benefitsComparedToSugar.list.map((benefit, index) => (
-                                        <li key={index} className="text-md md:text-lg text-gray-700">
+                                        <li key={index} className="text-md md:text-lg  dark:text-white text-gray-700">
                                             {benefit}
                                         </li>
                                     ))}
